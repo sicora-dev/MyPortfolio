@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen relative ">
       {/* Contenido principal */}
-      <MainContent>
+      <MainContent >
         <Biography />
       </MainContent>
       <MainContent>

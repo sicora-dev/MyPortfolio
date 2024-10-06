@@ -12,6 +12,7 @@ module.exports = {
         '0.5': '0.1px',
       },
       colors: {
+        'spacedark': 'rgb(20, 16, 39)',
         'spacepurple': 'rgba(178, 121, 216, .959);', 
         'highlight-purple': '#c770f0',
 

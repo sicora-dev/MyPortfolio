@@ -11,7 +11,7 @@ function Biography() {
     
     }
     return (
-        <div className='flex flex-grow flex-col sm:flex-row bg-[rgba(13,17,23,0.5)] p-5 rounded-[0.375rem] gap-4 '>
+        <div className='flex flex-grow flex-col sm:flex-row bg-[rgba(13,17,23,0.5)] p-5 rounded-[0.375rem] gap-4 about'>
             <img src='/foto_carnet.jpg' alt='Foto de Carnet' className=' w-50 h-80 object-cover rounded-[0.375rem] xl:w-100 transition-transform transform hover:scale-105' />
             <div className='ml-4 flex-grow items-center'>
                 <div className='flex mx-4 px-2 items-center justify-between sm:justify-normal'>
@@ -33,7 +33,9 @@ function Biography() {
                     Me considero una persona curiosa por naturaleza, siempre buscando aprender algo nuevo. Además, tengo una habilidad especial para <span className='font-bold text-highlight-purple'>liderar proyectos</span>,
                     motivando a mis compañeros y resolviendo conflictos de manera efectiva. Valoro enormemente el <span className='font-bold text-highlight-purple'>trabajo en equipo</span> y siempre busco colaborar para alcanzar los mejores resultados posibles.
                 </p>
+                
             </div>
+            
         </div>
     )
 

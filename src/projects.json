@@ -2,11 +2,13 @@
     {
       "titulo": "Portfolio",
       "desc": "Mi portfolio personal, creado con React y TailwindCSS",
-      "img": "./portfolio-imagen.webp"
+      "img": "./portfolio-imagen.webp",
+      "url": "https://github.com/sicora-dev/MyPortfolio"
     },
     {
       "titulo": "Web Coffee Shop",
       "desc": "Tienda online de una marca de Café ficticia, hecha con HTML, CSS, JavaScript y PHP",
-      "img": "https://via.placeholder.com/150"
+      "img": "./ruhido-imagen.webp",
+      "url": "https://github.com/sicora-dev/WebRuhidoCoffeeShop"
     }
   ]

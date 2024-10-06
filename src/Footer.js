@@ -2,7 +2,7 @@ import './index.css';
 
 function Footer() {
     const email ='sirocornejoraez@gmail.com';
-    const subject = 'Contacto desde potfolio';
+    const subject = 'Contacto desde portfolio';
     const body = '';
 
     const openEmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
