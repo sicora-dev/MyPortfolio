@@ -3,9 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  
-}
+
 body {
   margin: 0;
   font-family: "Raleway", serif !important;
