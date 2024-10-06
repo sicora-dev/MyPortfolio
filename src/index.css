@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  
+}
+body {
+  margin: 0;
+  font-family: "Raleway", serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html, body, #root {
+  height: 100%;
+  scrollbar-width: 25px; /* Ancho de la barra de desplazamiento */
+  scrollbar-color: #c770f0 rgb(20, 16, 39); 
+}
+
+body::-webkit-scrollbar {
+  width: 25px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(20, 16, 39);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #c770f0;    /* color of the scroll thumb */
+  border-radius: 1px;       /* roundness of the scroll thumb */
+  border: 1px solid rgba(178, 121, 216, .959);;  /* creates padding around scroll thumb */
+}
+
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.button-efecto-slide {
+  position: relative;
+  overflow:hidden;
+}
+
+.button-efecto-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(206, 95, 248, 0.5);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.button-efecto-slide:hover::before {
+  transform: translateX(0);
+}
+
+/* Contenedor del parallax */
+
+
+/* Estrellas por detrás del contenido */
+.space-background {
+  position: relative;
+  background-color: rgb(20, 16, 39); /* Morado oscuro */
+}
+
+.space-background::before,
+.space-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Estrellas por detrás del contenido */
+.space-background {
+  position: relative;
+  background-color: rgb(20, 16, 39); /* Morado oscuro */
+}
+
+.space-background::before,
+.space-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Primera capa de estrellas (pequeñas y menos opacas) */
+.space-background::before {
+  background: transparent;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 2px, transparent 2px), 
+                    radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+  background-size: 300px 300px, 500px 500px; /* Más espacio entre estrellas */
+  background-position: 15% 25%, 75% 65%; /* Pocas posiciones aleatorias */
+  animation: twinkling 3s linear infinite backwards running;
+}
+
+/* Segunda capa de estrellas (más grandes y brillantes) */
+.space-background::after {
+  background: transparent;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 3px, transparent 3px),
+                    radial-gradient(circle, rgba(255, 255, 255, 1) 2.5px, transparent 2.5px);
+  background-size: 400px 400px, 600px 600px; /* Más espacio entre estrellas */
+  background-position: 70% 40%, 80% 70%; /* Pocas posiciones aleatorias */
+  animation: twinkling 5s linear infinite backwards running;
+}
+
+
+/* Efecto de parpadeo de las estrellas */
+@keyframes twinkling {
+  0% { opacity: 1; }
+  50% { opacity: 0.1; }
+  100% { opacity: 1; }
+}
+
+
+
+

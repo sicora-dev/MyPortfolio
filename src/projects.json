@@ -1,0 +1,12 @@
+[
+    {
+      "titulo": "Portfolio",
+      "desc": "Mi portfolio personal, creado con React y TailwindCSS",
+      "img": "./portfolio-imagen.webp"
+    },
+    {
+      "titulo": "Web Coffee Shop",
+      "desc": "Tienda online de una marca de Café ficticia, hecha con HTML, CSS, JavaScript y PHP",
+      "img": "https://via.placeholder.com/150"
+    }
+  ]
