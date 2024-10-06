@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sicora-dev/MyPortfolio/static/css/main.2444e43f.css",
-    "main.js": "/sicora-dev/MyPortfolio/static/js/main.6717e41d.js",
-    "static/js/453.83234151.chunk.js": "/sicora-dev/MyPortfolio/static/js/453.83234151.chunk.js",
-    "index.html": "/sicora-dev/MyPortfolio/index.html",
-    "main.2444e43f.css.map": "/sicora-dev/MyPortfolio/static/css/main.2444e43f.css.map",
-    "main.6717e41d.js.map": "/sicora-dev/MyPortfolio/static/js/main.6717e41d.js.map",
-    "453.83234151.chunk.js.map": "/sicora-dev/MyPortfolio/static/js/453.83234151.chunk.js.map"
+    "main.css": "/MyPortfolio/static/css/main.2444e43f.css",
+    "main.js": "/MyPortfolio/static/js/main.f534d6af.js",
+    "static/js/453.83234151.chunk.js": "/MyPortfolio/static/js/453.83234151.chunk.js",
+    "index.html": "/MyPortfolio/index.html",
+    "main.2444e43f.css.map": "/MyPortfolio/static/css/main.2444e43f.css.map",
+    "main.f534d6af.js.map": "/MyPortfolio/static/js/main.f534d6af.js.map",
+    "453.83234151.chunk.js.map": "/MyPortfolio/static/js/453.83234151.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2444e43f.css",
-    "static/js/main.6717e41d.js"
+    "static/js/main.f534d6af.js"
   ]
 }
