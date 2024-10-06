@@ -19,7 +19,7 @@ function Footer() {
                         </a>
                     </li>
                     
-                    <p className="text-center">Mi portfolio 2024/2025</p>
+                    <p className="text-center">sirocornejoraez@gmail.com</p>
                 </ul>
 
             </div>

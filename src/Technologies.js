@@ -1,9 +1,9 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-function Type() {
+function Technologies() {
   return (
-    <div className="inline-block">
+    <div>
       <Typewriter
         options={{
           strings: [
@@ -22,4 +22,4 @@ function Type() {
   );
 }
 
-export default Type;
+export default Technologies;

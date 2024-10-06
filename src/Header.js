@@ -60,7 +60,7 @@ function Header() {
         <h1 className="text-2xl font-bold mb-0 font-raleway text-highlight-purple">
           Siro's Portfolio
         </h1>
-        <ul className="flex space-x-4 mb-0 items-center">
+        <ul className="flex space-x-4 mb-0 items-center hidden sm:flex">
           <li className="cursor-pointer">
             <a
               onClick={removeProjects}
@@ -86,9 +86,9 @@ function Header() {
               Contact
             </a>
           </li>
-          <li className="cursor-pointer">
+          <li className="cursor-pointer ">
             <a
-              href="#"
+              href="https://github.com/sicora-dev"
               className="font-raleway px-2 py-1 rounded-[0.375rem] flex"
             >
               <FaGithub className="text-2xl hover:text-highlight-purple transition-transform transform hover:scale-110" />
