@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import projects from "./projects.json";
 import Puntoscarga from "./Puntoscarga";
-import { FaMousePointer } from "react-icons/fa";
+import { PiCursorClickFill } from "react-icons/pi";
+import "./Projects.css";
 import "./index.css";
 
 function Projects() {
@@ -58,7 +59,12 @@ function Projects() {
                     onClick={() => window.open(project.url, "_blank")}
                     className="absolute bottom-2 right-2 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-2  rounded-[0.375rem]"
                   >
-                    <FaMousePointer className="text-2xl" />
+                    <PiCursorClickFill
+                      className="text-2xl"
+                      style={{
+                        animation: "click-animation 1s infinite",
+                      }}
+                    />
                   </button>
                 </div>
               </div>
@@ -82,14 +88,19 @@ function Projects() {
                     onClick={() => window.open(project.url, "_blank")}
                     className="absolute -bottom-2 -right-4 lg:bottom-2 lg:right-2 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-2 rounded-[0.375rem]"
                   >
-                    <FaMousePointer className="text-2xl" />
+                    <PiCursorClickFill
+                      className="text-2xl"
+                      style={{
+                        animation: "click-animation 1s infinite",
+                      }}
+                    />
                   </button>
                 </div>
                 <div className="flex-grow w-96 ">
                   <h3 className="font-github text-xl mx-4 px-2 py-1 rounded-[0.375rem] font-bold text-highlight-purple text-center lg:text-left">
                     {project.titulo}
                   </h3>
-                  <p className="font-github mt-2 mx-4 px-2 py-1 rounded-[0.375rem] h-auto desc text-center sm:text-left">
+                  <p className="font-github mt-2 mx-4 px-2 py-1 rounded-[0.375rem] h-auto text-center sm:text-left">
                     {project.desc}
                   </p>
                 </div>

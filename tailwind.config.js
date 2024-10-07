@@ -15,6 +15,8 @@ module.exports = {
         'spacedark': 'rgb(20, 16, 39)',
         'spacepurple': 'rgba(178, 121, 216, .959);', 
         'highlight-purple': '#c770f0',
+        'action-color': '#8A2BE2',
+        'action-color-hover': '#7A1FA2',
 
         borderColor: {
           'cardborder': 'rgb(240, 246, 252)',
