@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 
 function Technologies() {
   return (
-    <div>
+    <div className="justify-center">
       <Typewriter
         options={{
           strings: [

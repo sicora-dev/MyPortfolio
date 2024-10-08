@@ -29,7 +29,7 @@
     -->
     <title>Siro's portfolio</title>
   </head>
-  <body class="space-background">
+  <body class="space-background hidden-until-loaded">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -43,4 +43,9 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    window.addEventListener('load', function() {
+      document.body.classList.remove('hidden-until-loaded');
+    });
+  </script>
 </html>
