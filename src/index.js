@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
+import { scroller } from "react-scroll";
 import "./index.css";
 import App from "./App";
 import Header from "./Header";
@@ -9,42 +10,74 @@ import reportWebVitals from "./reportWebVitals";
 const Main = () => {
   const [currentSection, setCurrentSection] = useState(1);
   const [direction, setDirection] = useState("down");
+  const [scrollDirection, setScrollDirection] = useState(null);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [atTop, setAtTop] = useState(false);
+  const [atBottom, setAtBottom] = useState(false);
 
-  const handleUpClick = () => {
-    if (currentSection > 1) {
-      setDirection("up");
-      setCurrentSection(currentSection - 1);
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    if (currentScrollY === 0) {
+      setAtTop(true);
+    } else if (currentScrollY + windowHeight >= documentHeight) {
+      setAtBottom(true);
+    } else {
+      setAtTop(false);
+      setAtBottom(false);
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
+  const handleWheel = (e) => {
+    const documentHeight = document.documentElement.scrollHeight;
+    if (e.deltaY < 0) {
+      setScrollDirection("up");
+      if (atTop && currentSection > 1) {
+        setDirection("up");
+        setCurrentSection(currentSection - 1);
+        scroller.scrollTo(`section${currentSection - 1}`, {
+          duration: 800,
+          delay: 0,
+          smooth: "easeInOutQuart",
+        });
+        setAtTop(false);
+        window.scrollTo(0, documentHeight);
+       
+      }
+    } else if (e.deltaY > 0) {
+      setScrollDirection("down");
+      if (atBottom && currentSection < 3) {
+        setDirection("down");
+        setCurrentSection(currentSection + 1);
+        scroller.scrollTo(`section${currentSection + 1}`, {
+          duration: 800,
+          delay: 0,
+          smooth: "easeInOutQuart",
+        });
+        setAtBottom(false);
+        window.scrollTo(0, 0);
+      }
     }
   };
 
-  const handleDownClick = () => {
-    if (currentSection < 3) {
-      setDirection("down");
-      setCurrentSection(currentSection + 1);
-    }
-  };
-  
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("wheel", handleWheel);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, [lastScrollY, scrollDirection, atTop, atBottom, currentSection]);
 
   return (
     <React.StrictMode>
-      <Header />
-      <div className="fixed top-1/2 right-4 transform -translate-y-1/2 flex flex-col space-y-2 z-50">
-        <button
-          onClick={handleUpClick}
-          disabled={currentSection === 1}
-          className="bg-action-color text-white px-4 py-2 rounded disabled:opacity-50"
-        >
-          Up
-        </button>
-        <button
-          onClick={handleDownClick}
-          disabled={currentSection === 3}
-          className="bg-action-color text-white px-4 py-2 rounded disabled:opacity-50"
-        >
-          Down
-        </button>
-      </div>
+      <Header setCurrentSection={setCurrentSection} />
       <App currentSection={currentSection} direction={direction} />
+      <Footer />
     </React.StrictMode>
   );
 };
@@ -52,7 +85,4 @@ const Main = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Main />);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

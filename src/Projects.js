@@ -57,7 +57,7 @@ function Projects() {
                   />
                   <button
                     onClick={() => window.open(project.url, "_blank")}
-                    className="absolute bottom-2 right-2 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-2  rounded-[0.375rem]"
+                    className="absolute bottom-2 right-2 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-2 rounded-[0.375rem]"
                   >
                     <PiCursorClickFill
                       className="text-2xl"

@@ -3,10 +3,9 @@ import "./index.css";
 
 function ContactForm() {
     
-
   return (
     <div class="w-full max-w-screen-sm items-center justify-center">
-      <form class="bg-[rgba(13,17,23,0.5)] shadow-md rounded-[0.375rem] px-8 pt-6 pb-8 mb-4">
+      <form class="bg-[rgba(13,17,23,0.5)] shadow-md rounded-[0.375rem] px-8 pt-6 pb-8">
         <div class="mb-4">
           <label
             class="block text-highlight-purple text-md font-bold mb-2"
@@ -23,7 +22,7 @@ function ContactForm() {
         </div>
         <div class="mb-6">
           <label
-            class="block text-highlight-purple text-md font-bold mb-2"
+            class="block text-highlight-purple text-md font-bold mb-2 w-fit"
             for="message"
           >
             Mensaje
@@ -37,7 +36,7 @@ function ContactForm() {
         </div>
         <div class="flex items-center justify-between">
           <button
-            class="bg-action-color hover:bg-action-color-hover text-white font-bold py-2 px-4 rounded-[0.375rem] focus:outline-none focus:shadow-outline"
+            class="bg-action-color hover:bg-action-color-hover text-white font-bold py-2 px-4 rounded-[0.375rem] transform ease-in-out duration-200 focus:outline-none focus:shadow-outline hover:scale-105"
             type="button"
           >
             Enviar

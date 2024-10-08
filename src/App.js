@@ -23,11 +23,11 @@ function App({ currentSection, direction }) {
     }
   }, [currentSection]);
   return (
-    <div className="flex flex-col min-h-screen relative overflow-hidden">
+    <div className="flex flex-col h-full lg:h-[100vh] relative overflow-hidden">
       {currentSection === 1 && (
         <>
           <MainContent
-            id="section1"
+            name="section1"
             className={`absolute top-0 left-0  h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-center justify-center w-full transition-section ${
               direction === "down" ? "slide-in-down" : "slide-in-up"
             }`}
@@ -39,8 +39,8 @@ function App({ currentSection, direction }) {
 
       {currentSection === 2 && (
         <MainContent
-          id="section2"
-          className={`absolute top-0 left-0  h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-center justify-center w-full transition-section ${
+          name="section2"
+          className={`absolute top-0 left-0  h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-start justify-center w-full transition-section ${
             direction === "down" ? "slide-in-down" : "slide-in-up"
           }`}
         >
@@ -50,8 +50,8 @@ function App({ currentSection, direction }) {
 
       {currentSection === 3 && (
         <MainContent
-          id="section3"
-          className={`absolute top-0 left-0  h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-center justify-center w-full transition-section ${
+          name="section3"
+          className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-start justify-center w-full transition-section ${
             direction === "down" ? "slide-in-down" : "slide-in-up"
           }`}
         >
