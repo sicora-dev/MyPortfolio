@@ -19,7 +19,7 @@ code {
 html, body, #root {
   height: 100%;
   width: 100%;
-  scrollbar-width: 25px; /* Ancho de la barra de desplazamiento */
+  scrollbar-width: 25px; 
   scrollbar-color: #c770f0 rgb(20, 16, 39); 
   scroll-behavior: smooth;
 }
@@ -76,17 +76,17 @@ button {
 }
 
 body::-webkit-scrollbar {
-  width: 25px;               /* width of the entire scrollbar */
+  width: 25px;             
 }
 
 body::-webkit-scrollbar-track {
-  background: rgb(20, 16, 39);        /* color of the tracking area */
+  background: rgb(20, 16, 39);      
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #c770f0;    /* color of the scroll thumb */
-  border-radius: 1px;       /* roundness of the scroll thumb */
-  border: 1px solid rgba(178, 121, 216, .959);;  /* creates padding around scroll thumb */
+  background-color: #c770f0; 
+  border-radius: 1px; 
+  border: 1px solid rgba(178, 121, 216, .959);;  
 }
 
 
@@ -122,13 +122,10 @@ body::-webkit-scrollbar-thumb {
   transform: translateX(0);
 }
 
-/* Contenedor del parallax */
 
-
-/* Estrellas por detrás del contenido */
 .space-background {
   position: relative;
-  background-color: rgb(20, 16, 39); /* Morado oscuro */
+  background-color: rgb(20, 16, 39);
 }
 
 .space-background::before,
@@ -143,10 +140,9 @@ body::-webkit-scrollbar-thumb {
   pointer-events: none;
 }
 
-/* Estrellas por detrás del contenido */
 .space-background {
   position: relative;
-  background-color: rgb(20, 16, 39); /* Morado oscuro */
+  background-color: rgb(20, 16, 39);
 }
 
 .space-background::before,
@@ -161,28 +157,28 @@ body::-webkit-scrollbar-thumb {
   pointer-events: none;
 }
 
-/* Primera capa de estrellas (pequeñas y menos opacas) */
+
 .space-background::before {
   background: transparent;
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 2px, transparent 2px), 
                     radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
-  background-size: 300px 300px, 500px 500px; /* Más espacio entre estrellas */
-  background-position: 15% 25%, 75% 65%; /* Pocas posiciones aleatorias */
+  background-size: 300px 300px, 500px 500px; 
+  background-position: 15% 25%, 75% 65%; 
   animation: twinkling 3s linear infinite backwards running;
 }
 
-/* Segunda capa de estrellas (más grandes y brillantes) */
+
 .space-background::after {
   background: transparent;
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 3px, transparent 3px),
                     radial-gradient(circle, rgba(255, 255, 255, 1) 2.5px, transparent 2.5px);
-  background-size: 400px 400px, 600px 600px; /* Más espacio entre estrellas */
-  background-position: 70% 40%, 80% 70%; /* Pocas posiciones aleatorias */
+  background-size: 400px 400px, 600px 600px; 
+  background-position: 70% 40%, 80% 70%; 
   animation: twinkling 5s linear infinite backwards running;
 }
 
 
-/* Efecto de parpadeo de las estrellas */
+
 @keyframes twinkling {
   0% { opacity: 1; }
   50% { opacity: 0.1; }
