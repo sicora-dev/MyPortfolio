@@ -11,14 +11,14 @@ function Biography() {
     
     }
     return (
-        <div className='flex flex-grow flex-col sm:flex-row bg-[rgba(13,17,23,0.5)] p-5 rounded-[0.375rem] gap-4 about'>
-            <img src='./foto_carnet.jpg' alt='Foto de Carnet' className=' w-50 h-80 object-cover rounded-[0.375rem] xl:w-100 transition-transform transform hover:scale-105' />
+        <div className='flex flex-grow flex-col lg:flex-row bg-[rgba(13,17,23,0.5)] p-5 rounded-[0.375rem] gap-4 about items-center h-full'>
+            <img src='./foto_carnet.jpg' alt='Foto de Carnet' className=' w-auto h-auto sm:w-96 object-cover rounded-[0.375rem] xl:w-100 transition-transform transform hover:scale-105' />
             <div className='ml-4 flex-grow items-center'>
-                <div className='flex mx-4 px-2 items-center justify-between sm:justify-normal'>
+                <div className='h-auto flex mx-4 px-2 items-center justify-center sm:justify-normal md:justify-between lg:justify-normal'>
                     <h2 className='font-github text-xl py-1 rounded-[0.375rem] font-bold text-highlight-purple'>ME PRESENTO...</h2>
                     <button 
                     onClick={downloadPdf}
-                    className='font-github ml-0 sm:ml-4 px-2 py-1 rounded-[0.375rem] flex items-center border button-efecto-slide transition-transform transform hover:scale-105'>
+                    className='font-github ml-0 sm:ml-4 px-2 py-1 rounded-[0.375rem] flex items-center border shadow-lg button-efecto-slide transition-transform transform hover:scale-105 bg-action-color text-white hover:bg-action-color-hover hidden md:flex'>
                         <span className='mr-2 '>CV</span>
                         <FiDownload />
                     </button>
@@ -30,17 +30,17 @@ function Biography() {
                     Mi verdadera pasión es el <span className='font-bold text-highlight-purple'>desarrollo frontend</span>, lo que me lleva a aprender constantemente y a enfrentar nuevos desafíos con entusiasmo.
                     Me encanta crear interfaces de usuario que sean tanto intuitivas como visualmente atractivas, y tengo un gran interés en tecnologías como:<br />
                     <br />
-                    <span className='font-bold text-highlight-purple text-2xl'><Technologies /></span>.
+                    <span className='font-bold text-highlight-purple text-2xl'><Technologies /></span>
                     <br />
                     Me considero una persona curiosa por naturaleza, siempre buscando aprender algo nuevo. Además, tengo una habilidad especial para <span className='font-bold text-highlight-purple'>liderar proyectos</span>,
                     motivando a mis compañeros y resolviendo conflictos de manera efectiva. Valoro enormemente el <span className='font-bold text-highlight-purple'>trabajo en equipo</span> y siempre busco colaborar para alcanzar los mejores resultados posibles.
                 </p>
-                <p className='font-github mt-2 mx-4 px-2 py-1 rounded-[0.375rem] h-auto flex-grow block sm:hidden'>
+                <p className='font-github mt-2 mx-0 px-2 py-1 rounded-[0.375rem] h-auto flex-grow block sm:hidden'>
                     Soy Siro, estudiante de <span className='font-bold text-highlight-purple'>Desarrollo de Aplicaciones Multiplataforma</span>.
                     <br /><br />
                     Mi pasión es el <span className='font-bold text-highlight-purple'>desarrollo frontend</span>. Disfruto creando interfaces intuitivas y visualmente atractivas, y me interesa mucho trabajar con tecnologías como:
                     <br /><br />
-                    <span className='font-bold text-highlight-purple text-xl'><Technologies /></span>.
+                    <span className='font-bold text-highlight-purple text-xl text-center'><Technologies /></span>
                     <br />
                     Me considero curioso, buen líder y un entusiasta del <span className='font-bold text-highlight-purple'>trabajo en equipo</span>.
                 </p>
