@@ -40,7 +40,7 @@ function App({ currentSection, direction }) {
       {currentSection === 2 && (
         <MainContent
           name="section2"
-          className={`absolute top-0 left-0  h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-start justify-center w-full transition-section ${
+          className={`absolute top-0 left-0  h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-center justify-center w-full transition-section ${
             direction === "down" ? "slide-in-down" : "slide-in-up"
           }`}
         >
@@ -51,7 +51,7 @@ function App({ currentSection, direction }) {
       {currentSection === 3 && (
         <MainContent
           name="section3"
-          className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-start justify-center w-full transition-section ${
+          className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-center justify-center w-full transition-section ${
             direction === "down" ? "slide-in-down" : "slide-in-up"
           }`}
         >

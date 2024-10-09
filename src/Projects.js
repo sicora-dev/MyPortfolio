@@ -40,7 +40,7 @@ function Projects() {
               className="flex flex-col lg:flex-row bg-[rgba(13,17,23,0.5)] p-5 rounded-[0.375rem] gap-4"
             >
               <div className="flex w-full items-center flex-col lg:flex-row">
-                <div className="flex-grow ">
+                <div className="flex-grow w-ful">
                   <h3 className="font-github text-xl mx-4 px-2 py-1 rounded-[0.375rem] font-bold text-highlight-purple">
                     {project.titulo}
                   </h3>
@@ -96,7 +96,7 @@ function Projects() {
                     />
                   </button>
                 </div>
-                <div className="flex-grow w-96 ">
+                <div className="flex-grow w-full ">
                   <h3 className="font-github text-xl mx-4 px-2 py-1 rounded-[0.375rem] font-bold text-highlight-purple text-center lg:text-left">
                     {project.titulo}
                   </h3>
