@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import "./index.css";
 
 function MainContent({id, className, children}) {
