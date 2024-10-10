@@ -9,7 +9,6 @@ import reportWebVitals from "./reportWebVitals";
 
 const Main = () => {
   const [currentSection, setCurrentSection] = useState(1);
-  const [direction, setDirection] = useState("down");
   const header = document.querySelector("header");
 
   const handleScroll = () => {
@@ -18,7 +17,7 @@ const Main = () => {
     const documentHeight = document.documentElement.scrollHeight;
 
     if (currentScrollY === 0 && currentSection > 1) {
-      setDirection("up");
+      
       setCurrentSection(currentSection - 1);
       scroller.scrollTo(`section${currentSection - 1}`, {
         duration: 800,
@@ -28,7 +27,7 @@ const Main = () => {
       document.body.classList.add("no-scroll");
       setTimeout(() => {
         window.scrollTo({
-          top: 50,
+          top: currentScrollY + 1,
           behavior: "smooth",
         });
         
@@ -39,7 +38,7 @@ const Main = () => {
       currentScrollY + windowHeight >= documentHeight &&
       currentSection < 3
     ) {
-      setDirection("down");
+      
       setCurrentSection(currentSection + 1);
       scroller.scrollTo(`section${currentSection + 1}`, {
         duration: 800,
@@ -49,7 +48,7 @@ const Main = () => {
       document.body.classList.add("no-scroll");
       setTimeout(() => {
         window.scrollTo({
-          top: 50,
+          top: 1,
           behavior: "smooth",
         });
         
@@ -71,8 +70,8 @@ const Main = () => {
   return (
     <React.StrictMode>
       <Header setCurrentSection={setCurrentSection} />
-      <App currentSection={currentSection} direction={direction} />
-      <Footer />
+      <App currentSection={currentSection} />
+      
     </React.StrictMode>
   );
 };

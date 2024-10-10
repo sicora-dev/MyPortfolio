@@ -27,20 +27,20 @@ function Projects() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 w-full projects">
+    <div className="flex flex-col gap-4 w-full projects mt-56 md:mt-0">
       <h2 className="font-github text-xl mx-4 px-2 py-1 rounded-[0.375rem] font-bold text-highlight-purple">
         Mis proyectos <Puntoscarga />
       </h2>
       {info.map((project, index) => {
-        if (index % 2 === 0 && screenSize.width > 1023) {
+        if (index % 2 === 0 && screenSize.width > 767) {
           return (
             <div
               onClick={() => window.open(project.url, "_blank")}
               key={index}
-              className="flex flex-col lg:flex-row bg-[rgba(13,17,23,0.5)] p-5 rounded-[0.375rem] gap-4"
+              className="flex flex-col md:flex-row bg-[rgba(13,17,23,0.5)] p-5 rounded-[0.375rem] gap-4"
             >
-              <div className="flex w-full items-center flex-col lg:flex-row">
-                <div className="flex-grow w-ful">
+              <div className="flex w-full items-center justify-center flex-col md:flex-row">
+                <div className="w-full">
                   <h3 className="font-github text-xl mx-4 px-2 py-1 rounded-[0.375rem] font-bold text-highlight-purple">
                     {project.titulo}
                   </h3>
@@ -53,7 +53,7 @@ function Projects() {
                     onClick={() => window.open(project.url, "_blank")}
                     src={project.img}
                     alt={project.titulo}
-                    className="cursor-pointer w-auto h-auto sm:w-96 object-cover rounded-[0.375rem] transition-transform transform ease-in-out duration-200 hover:scale-105 hover:shadow-md hover:shadow-highlight-purple"
+                    className="cursor-pointer h-auto w-96 object-cover rounded-[0.375rem] transition-transform transform ease-in-out duration-200 hover:scale-105 hover:shadow-md hover:shadow-highlight-purple"
                   />
                   <button
                     onClick={() => window.open(project.url, "_blank")}
@@ -74,15 +74,15 @@ function Projects() {
           return (
             <div
               key={index}
-              className="flex flex-col md:flex-row bg-[rgba(13,17,23,0.5)] p-5 rounded-[0.375rem] gap-4 item"
+              className="flex flex-col md:flex-row bg-[rgba(13,17,23,0.5)] p-5 rounded-[0.375rem] gap-4"
             >
-              <div className="flex w-full items-center flex-col lg:flex-row">
-                <div className="relative group ">
+              <div className="flex w-full items-center flex-col md:flex-row">
+                <div className="relative group">
                   <img
                     onClick={() => window.open(project.url, "_blank")}
                     src={project.img}
                     alt={project.titulo}
-                    className="cursor-pointer w-auto h-auto sm:w-96 object-cover rounded-[0.375rem] transition-transform transform ease-in-out duration-200 lg:shadow-none shadow-md shadow-highlight-purple hover:scale-105 hover:shadow-md hover:shadow-highlight-purple mb-4 lg:mb-0"
+                    className="cursor-pointer h-auto w-96 object-cover rounded-[0.375rem] transition-transform transform ease-in-out duration-200 lg:shadow-none shadow-md shadow-highlight-purple hover:scale-105 hover:shadow-md hover:shadow-highlight-purple mb-4 lg:mb-0"
                   />
                   <button
                     onClick={() => window.open(project.url, "_blank")}
@@ -96,7 +96,7 @@ function Projects() {
                     />
                   </button>
                 </div>
-                <div className="flex-grow w-full ">
+                <div className="w-full ">
                   <h3 className="font-github text-xl mx-4 px-2 py-1 rounded-[0.375rem] font-bold text-highlight-purple text-center lg:text-left">
                     {project.titulo}
                   </h3>

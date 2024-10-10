@@ -1,51 +1,50 @@
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
-function Header({ setCurrentSection }) {
+function Header({setCurrentSection}) {
   const [lastScroll, setLastScroll] = useState(0);
+  const [lastMouseMove, setLastMouseMove] = useState(0);
+  const [isInactive, setIsInactive] = useState(false);
 
-  const changeSection = (e) => {
-    const section = parseInt(e.target.id, 10);
-    setCurrentSection(section);
+  const goSection = (e) => {
+    setCurrentSection(parseInt(e.target.id));
+    
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      const header = document.querySelector("header");
-
-      if (header && header.classList) {
-       
-        if (currentScroll > 1) {
-          header.classList.add("backdrop-blur-sm");
-        } else {
-          header.classList.remove("backdrop-blur-sm");
-        }
-
-      
-        if (currentScroll > lastScroll) {
-        
-          header.classList.add("-translate-y-full");
-          header.classList.remove("translate-y-0");
-        } else {
-          
-          header.classList.add("translate-y-0");
-          header.classList.remove("-translate-y-full");
-        }
-      }
-
-      setLastScroll(currentScroll);
+    const handleMouseMove = () => {
+      setLastMouseMove(Date.now());
+      setIsInactive(false);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [lastScroll]);
+  }, []);
+
+  useEffect(() => {
+    const checkInactivity = () => {
+      if (Date.now() - lastMouseMove > 500) { // 1 segundo de inactividad
+        setIsInactive(true);
+      }
+    };
+
+    const interval = setInterval(checkInactivity, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [lastMouseMove]);
+
+  
+ 
 
   return (
-    <header className="fixed top-0 w-full transition-transform duration-300 ease-in-out z-50 translate-y-0 bg-[rgba(13,17,23,0.5)] text-[rgb(240,246,252)]">
+    <header className={`fixed top-0 w-full transition-transform duration-300 ease-in-out z-10 translate-y-0 bg-[rgba(13,17,23,0.5)] text-[rgb(240,246,252)] ${
+      isInactive ? "hidden-section" : ""
+    }`}>
       <div className="w-full p-4 shadow-xl rounded-t-md flex justify-around items-center">
         <h1 className="text-2xl font-bold mb-0 font-raleway text-highlight-purple">
           Mi Portfolio
@@ -54,7 +53,7 @@ function Header({ setCurrentSection }) {
           <li className="cursor-pointer">
             <a
               id="1"
-              onClick={changeSection}
+              onClick={goSection}
               className="font-raleway px-2 py-1 rounded-[0.375rem] flex border border-[rgb(240,246,252)] button-efecto-slide transition-transform transform hover:scale-105"
             >
               Biografía
@@ -63,7 +62,7 @@ function Header({ setCurrentSection }) {
           <li className="cursor-pointer">
             <a
               id="2"
-              onClick={changeSection}
+              onClick={goSection}
               className="font-raleway px-2 py-1 rounded-[0.375rem] flex border border-[rgb(240,246,252)] button-efecto-slide transition-transform transform hover:scale-105"
             >
               Proyectos
@@ -72,7 +71,7 @@ function Header({ setCurrentSection }) {
           <li className="cursor-pointer">
             <a
               id="3"
-              onClick={changeSection}
+              onClick={goSection}
               className="font-raleway px-2 py-1 rounded-[0.375rem] flex border border-[rgb(240,246,252)] button-efecto-slide transition-transform transform hover:scale-105"
             >
               Contacto

@@ -15,49 +15,47 @@ function App({ currentSection, direction }) {
         "duration-300",
         "hover:shadow-2xl"
       );
-      section3.firstChild.firstChild.classList.add(
-        "transition-shadow",
-        "duration-300",
-        "hover:shadow-2xl"
-      );
+      
     }
+    if(document.getElementsByTagName("header")){
+      document.getElementsByTagName("header")[0].classList.remove("hidden-section");
+    }
+    
   }, [currentSection]);
   return (
-    <div className="flex flex-col h-full lg:h-[100vh] relative overflow-hidden">
-      {currentSection === 1 && (
+    <div className="flex flex-col h-full lg:h-[120vh] relative ">
+      
         <>
           <MainContent
+            currentSection={currentSection}
             name="section1"
-            className={`absolute top-0 left-0  h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-center justify-center w-full transition-section ${
-              direction === "down" ? "slide-in-down" : "slide-in-up"
-            }`}
+            className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
+            ${currentSection === 1 ? "" : "hidden-section"}`}
           >
             <Biography />
           </MainContent>
         </>
-      )}
-
-      {currentSection === 2 && (
+     
         <MainContent
+          currentSection={currentSection}
           name="section2"
-          className={`absolute top-0 left-0  h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-center justify-center w-full transition-section ${
-            direction === "down" ? "slide-in-down" : "slide-in-up"
-          }`}
+          className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
+          ${currentSection === 2 ? "" : "hidden-section"}`}
         >
           <Projects />
         </MainContent>
-      )}
-
-      {currentSection === 3 && (
+     
         <MainContent
+          currentSection={currentSection}
           name="section3"
-          className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-200 ease-in-out items-center justify-center w-full transition-section ${
-            direction === "down" ? "slide-in-down" : "slide-in-up"
-          }`}
+          className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 
+            transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
+            
+          ${currentSection === 3 ? "" : "hidden-section"}`}
         >
           <ContactForm />
         </MainContent>
-      )}
+     
     </div>
   );
 }

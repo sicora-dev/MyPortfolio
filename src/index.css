@@ -29,44 +29,14 @@ html, body, #root {
   scroll-behavior: smooth;
 }
 
+.hidden-section{
+  transform: translateY(-300%);
+}
+
 .hidden-until-loaded {
   visibility: hidden;
 }
 
-.transition-section {
-  transition: transform 0.7s ease-in-out;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.slide-in-down {
-  transform: translateY(0);
-  animation: slideDown 0.7s forwards;
-}
-
-.slide-in-up {
-  transform: translateY(100%);
-  animation: slideUp 0.7s forwards;
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 
 body::-webkit-scrollbar {
   width: 25px;             
