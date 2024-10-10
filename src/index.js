@@ -69,7 +69,7 @@ const Main = () => {
 
   return (
     <React.StrictMode>
-      <Header setCurrentSection={setCurrentSection} />
+      <Header setCurrentSection={setCurrentSection} currentSection={currentSection} />
       <App currentSection={currentSection} />
       
     </React.StrictMode>

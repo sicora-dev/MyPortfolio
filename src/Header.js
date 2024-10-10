@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
-function Header({setCurrentSection}) {
+function Header({setCurrentSection, currentSection}) {
   const [lastScroll, setLastScroll] = useState(0);
   const [lastMouseMove, setLastMouseMove] = useState(0);
   const [isInactive, setIsInactive] = useState(false);
@@ -26,17 +26,17 @@ function Header({setCurrentSection}) {
 
   useEffect(() => {
     const checkInactivity = () => {
-      if (Date.now() - lastMouseMove > 500) { // 1 segundo de inactividad
+      if (Date.now() - lastMouseMove > 500 && currentSection != 1) { // 1 segundo de inactividad
         setIsInactive(true);
       }
     };
 
-    const interval = setInterval(checkInactivity, 1000);
+    const interval = setInterval(checkInactivity, 2000);
 
     return () => {
       clearInterval(interval);
     };
-  }, [lastMouseMove]);
+  }, [lastMouseMove,currentSection]);
 
   
  
