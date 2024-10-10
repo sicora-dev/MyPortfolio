@@ -29,7 +29,8 @@ function App({ currentSection, direction }) {
           <MainContent
             currentSection={currentSection}
             name="section1"
-            className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
+            className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 
+              transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
             ${currentSection === 1 ? "" : "hidden-section"}`}
           >
             <Biography />
@@ -39,7 +40,8 @@ function App({ currentSection, direction }) {
         <MainContent
           currentSection={currentSection}
           name="section2"
-          className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
+          className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 
+            transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
           ${currentSection === 2 ? "" : "hidden-section"}`}
         >
           <Projects />

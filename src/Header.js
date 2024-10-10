@@ -50,31 +50,29 @@ function Header({setCurrentSection, currentSection}) {
         </h1>
         <ul className="flex space-x-4 mb-0 items-center hidden sm:flex">
           <li className="cursor-pointer">
-            <a
-              id="1"
+            <button id="1"
               onClick={goSection}
               className="font-raleway px-2 py-1 rounded-[0.375rem] flex border border-[rgb(240,246,252)] button-efecto-slide transition-transform transform hover:scale-105"
             >
-              Biografía
-            </a>
+              Biografia
+            </button>
           </li>
-          <li className="cursor-pointer">
-            <a
-              id="2"
+          <li className="cursor-pointer ">
+            <button id="2"
               onClick={goSection}
               className="font-raleway px-2 py-1 rounded-[0.375rem] flex border border-[rgb(240,246,252)] button-efecto-slide transition-transform transform hover:scale-105"
             >
               Proyectos
-            </a>
+            </button>
+            
           </li>
           <li className="cursor-pointer">
-            <a
-              id="3"
+          <button id="3"
               onClick={goSection}
               className="font-raleway px-2 py-1 rounded-[0.375rem] flex border border-[rgb(240,246,252)] button-efecto-slide transition-transform transform hover:scale-105"
             >
               Contacto
-            </a>
+            </button>
           </li>
           <li className="cursor-pointer">
             <a
