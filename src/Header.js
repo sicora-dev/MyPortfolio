@@ -9,6 +9,9 @@ function Header({setCurrentSection, currentSection}) {
     setCurrentSection(parseInt(e.target.id));
     
   };
+  const goBackMain = () => {
+    setCurrentSection(1);
+  }
 
   useEffect(() => {
     const handleMouseMove = () => {
@@ -46,7 +49,8 @@ function Header({setCurrentSection, currentSection}) {
     }`}>
       <div className="w-full p-4 shadow-xl rounded-t-md flex justify-around items-center">
         <h1 className="text-2xl font-bold mb-0 font-raleway text-highlight-purple">
-          Mi Portfolio
+          <button
+          onClick={goBackMain}>Mi portfolio</button>
         </h1>
         <ul className="flex space-x-4 mb-0 items-center hidden sm:flex">
           <li className="cursor-pointer">

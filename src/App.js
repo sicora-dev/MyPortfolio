@@ -23,13 +23,13 @@ function App({ currentSection, direction }) {
     
   }, [currentSection]);
   return (
-    <div className="flex flex-col h-full lg:h-[120vh] relative ">
+    <div className="flex flex-col h-full justify-center items-center">
       
         <>
           <MainContent
             currentSection={currentSection}
-            name="section1"
-            className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 
+            id="section1"
+            className={`absolute top-0 left-0 h-full flex text-[rgb(240,246,252)] p-4 
               transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
             ${currentSection === 1 ? "" : "hidden-section"}`}
           >
@@ -39,8 +39,8 @@ function App({ currentSection, direction }) {
      
         <MainContent
           currentSection={currentSection}
-          name="section2"
-          className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 
+          id="section2"
+          className={`absolute top-0 left-0 h-full flex text-[rgb(240,246,252)] p-4 
             transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
           ${currentSection === 2 ? "" : "hidden-section"}`}
         >
@@ -49,8 +49,8 @@ function App({ currentSection, direction }) {
      
         <MainContent
           currentSection={currentSection}
-          name="section3"
-          className={`absolute top-0 left-0 h-[100vh] flex text-[rgb(240,246,252)] p-4 
+          id="section3"
+          className={`absolute top-0 left-0 h-full flex text-[rgb(240,246,252)] p-4 
             transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
             
           ${currentSection === 3 ? "" : "hidden-section"}`}

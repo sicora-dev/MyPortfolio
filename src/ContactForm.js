@@ -4,11 +4,11 @@ import "./index.css";
 function ContactForm() {
     
   return (
-    <div class="w-full max-w-screen-sm items-center justify-center">
+    <div class="flex flex-grow max-w-screen-sm w-full items-center justify-center">
       <form 
       action="https://formspree.io/f/xeoqjnlz" 
       method="POST"
-      class="bg-[rgba(13,17,23,0.5)] shadow-md rounded-[0.375rem] px-8 pt-6 pb-8">
+      class="bg-[rgba(13,17,23,0.5)] w-[60vw] shadow-md rounded-[0.375rem] px-8 pt-6 pb-8">
         <div class="mb-4">
           <label
             class="block text-highlight-purple text-md font-bold mb-2"

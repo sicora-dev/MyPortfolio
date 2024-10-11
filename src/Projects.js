@@ -27,7 +27,7 @@ function Projects() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 w-full projects mt-56 md:mt-0">
+    <div className="flex flex-col gap-4 w-full projects md:mt-0">
       <h2 className="font-github text-xl mx-4 px-2 py-1 rounded-[0.375rem] font-bold text-highlight-purple">
         Mis proyectos <Puntoscarga />
       </h2>
@@ -57,7 +57,7 @@ function Projects() {
                   />
                   <button
                     onClick={() => window.open(project.url, "_blank")}
-                    className="absolute bottom-2 right-2 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-2 rounded-[0.375rem]"
+                    className="absolute md:-bottom-5 -right-4 lg:bottom-2 lg:right-2 flex items-center justify-center bg-black bg-opacity-50 text-white transition-opacity duration-200 p-2 rounded-[0.375rem]"
                   >
                     <PiCursorClickFill
                       className="text-2xl"
@@ -86,7 +86,7 @@ function Projects() {
                   />
                   <button
                     onClick={() => window.open(project.url, "_blank")}
-                    className="absolute -bottom-2 -right-4 lg:bottom-2 lg:right-2 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-2 rounded-[0.375rem]"
+                    className="absolute -bottom-2 -right-4 lg:bottom-2 lg:right-2 flex items-center justify-center bg-black bg-opacity-50 text-white transition-opacity duration-200 p-2 rounded-[0.375rem]"
                   >
                     <PiCursorClickFill
                       className="text-2xl"
