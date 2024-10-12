@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import projects from "./projects.json";
-import Puntoscarga from "./Puntoscarga";
 import { PiCursorClickFill } from "react-icons/pi";
 import "./Projects.css";
 import "./index.css";
@@ -28,9 +27,6 @@ function Projects() {
 
   return (
     <div className="flex flex-col gap-4 w-full projects md:mt-0">
-      <h2 className="font-github text-xl mx-4 px-2 py-1 rounded-[0.375rem] font-bold text-highlight-purple">
-        Mis proyectos <Puntoscarga />
-      </h2>
       {info.map((project, index) => {
         if (index % 2 === 0 && screenSize.width > 767) {
           return (

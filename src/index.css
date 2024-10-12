@@ -2,7 +2,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'bulma/css/bulma.css';
 
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-x-0 {
+  transform: rotateX(0deg);
+}
+
+.rotate-x-90 {
+  transform: rotateX(-90deg);
+}
+
+.rotate-x-180 {
+  transform: rotateX(-180deg);
+}
 
 body {
   margin: 0;
@@ -31,6 +47,18 @@ html, body, #root {
 
 .hidden-section{
   transform: translateY(-300%);
+} 
+
+.hidden-section-up{
+  transform: translateY(50%);
+  transition: transform 0.3s ease-in-out, opacity 0.1s ease-in-out;
+  opacity: 0;
+}
+
+.hidden-section-down{
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out, opacity 0.1s ease-in-out;
+  opacity: 0;  
 }
 
 .hidden-until-loaded {
@@ -64,26 +92,7 @@ body::-webkit-scrollbar-thumb {
   flex-grow: 1;
 }
 
-.button-efecto-slide {
-  position: relative;
-  overflow:hidden;
-}
 
-.button-efecto-slide::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(206, 95, 248, 0.5);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-}
-
-.button-efecto-slide:hover::before {
-  transform: translateX(0);
-}
 
 
 .space-background {

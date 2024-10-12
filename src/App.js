@@ -6,8 +6,10 @@ import Biography from "./Biography";
 import Projects from "./Projects";
 import ContactForm from "./ContactForm";
 
-function App({ currentSection, direction }) {
+function App({ currentSection }) {
+  
   useEffect(() => {
+    
     const section3 = document.getElementById("section3");
     if (section3) {
       section3.firstChild.classList.remove(
@@ -30,7 +32,7 @@ function App({ currentSection, direction }) {
             currentSection={currentSection}
             id="section1"
             className={`absolute top-0 left-0 h-full flex text-[rgb(240,246,252)] p-4 
-              transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
+              transform duration-1000 ease-in-out items-center justify-center w-full
             ${currentSection === 1 ? "" : "hidden-section"}`}
           >
             <Biography />
@@ -41,7 +43,7 @@ function App({ currentSection, direction }) {
           currentSection={currentSection}
           id="section2"
           className={`absolute top-0 left-0 h-full flex text-[rgb(240,246,252)] p-4 
-            transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
+            transform duration-1000 ease-in-out items-center justify-center w-full
           ${currentSection === 2 ? "" : "hidden-section"}`}
         >
           <Projects />
@@ -51,7 +53,7 @@ function App({ currentSection, direction }) {
           currentSection={currentSection}
           id="section3"
           className={`absolute top-0 left-0 h-full flex text-[rgb(240,246,252)] p-4 
-            transform duration-1000 ease-in-out items-center justify-center w-full transition-section 
+            transform duration-1000 ease-in-out items-center justify-center w-full 
             
           ${currentSection === 3 ? "" : "hidden-section"}`}
         >
