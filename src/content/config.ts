@@ -4,9 +4,13 @@ import { glob, file } from 'astro/loaders';
 
 const projects = defineCollection({
   schema: z.object({
+    id: z.number(),
     title: z.string(),
     desc: z.string(),
-    url: z.string()
+    url: z.string(),
+    icon: z.string().url(),
+    repo: z.string().url(),
+    stack: z.string()
   }),
 });
 

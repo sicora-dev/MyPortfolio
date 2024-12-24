@@ -7,13 +7,21 @@ export default {
     extend: {
       colors: {
         light: {
-          background: "#F3EFF5",
-          text: "#0D0A0B",
+          background: "#f5f5f5",
+          mainText: "#374151",
+          text: "#0a0a0a",
+          miniCard: "#dfdfdf"
         },
         dark: {
-          background: "#0D0A0B",
-          text: "#F3EFF5",
+          background: "#171717",
+          mainText: "#d1d5db",
+          text: "#ffffff",
+          miniCard: "#272727"
         }
+      },
+      backgroundImage: {
+        'light-shiny': 'radial-gradient(600px circle #dfdfdf, transparent 70%)',
+        'dark-shiny': 'radial-gradient(600px circle #272727, transparent 70%)',
       },
       fontFamily: {
         'body': ['"Geist"', ...defaultTheme.fontFamily.sans],

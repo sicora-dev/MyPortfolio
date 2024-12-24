@@ -1,26 +1,120 @@
 ---
-const { title, desc, url } = Astro.props;
+import TechCard from "./TechCard.astro";
+const { title, desc, url, icon, repo, stack } = Astro.props;
+const techs = stack.split(',')
+
 ---
 
-<card class="border-2 border-gray-600 rounded-md p-2 flex flex-col w-fit">
-  <h3 class="font-bold flex items-center gap-1 cursor-pointer hover:underline decoration-dotted group">
-    <a href=`${url}` target="_blank">{title}</a>
-    
-    <svg
-    class="group-hover:scale-105 transition ease-in-out"
-      width="15"
-      height="15"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+<card
+  class="border-gray-600 sm:border rounded-md p-5 flex flex-col w-full lg:w-fit shiny after:bg-light-shiny after:dark:bg-dark-shiny relative overflow-hidden"
+>
+  <input
+    aria-hidden="true"
+    class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full cursor-default rounded-[0.310rem] border transition-opacity duration-500 placeholder:select-none
+    border-white/50 opacity-1 sm:opacity-0"
+    style="
+      mask-image: radial-gradient(30% 50px at 16px 19px, black 45%, transparent);
+      background-color: transparent;
+    "
+  />
+  <input
+    aria-hidden="true"
+    class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full cursor-default rounded-[0.310rem] border transition-opacity duration-500 placeholder:select-none
+    border-white/50 sm:opacity-0 opacity-1"
+    style="
+      mask-image: radial-gradient(30% 50px at 50px 88px, black 45%, transparent);
+      background-color: transparent;
+    "
+  />
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -inset-px rounded-md opacity-0 transition duration-300"
+    style="
+      background: radial-gradient(600px circle at 24px 103px, rgba(97, 97, 97, 0.1), transparent 60%);
+    "
+  >
+  </div>
+  <div class="w-full flex justify-between items-center">
+    <h3
+      class="font-bold flex items-center gap-1 cursor-pointer hover:underline underline underline-offset-4 sm:no-underline group"
     >
-      <path
-        d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"></path>
-    </svg>
-  </h3>
+      <img class="w-4 h-4 text-[#72B01D]" src={icon} />
+      <a href=`${url}` target="_blank">{title}</a>
+
+      <svg
+        class="group-hover:scale-105 transition ease-in-out"
+        width="10"
+        height="15"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M20 4L12 12M20 4V8.5M20 4H15.5M19 12.5V16.8C19 17.9201 19 18.4802 18.782 18.908C18.5903 19.2843 18.2843 19.5903 17.908 19.782C17.4802 20 16.9201 20 15.8 20H7.2C6.0799 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4 18.4802 4 17.9201 4 16.8V8.2C4 7.0799 4 6.51984 4.21799 6.09202C4.40973 5.71569 4.71569 5.40973 5.09202 5.21799C5.51984 5 6.07989 5 7.2 5H11.5"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </h3>
+    <a href={repo} target="_blank">
+      <svg
+          viewBox="0 0 256 250"
+          width="15"
+          height="15"
+          fill="#fff"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid"
+        >
+          <path
+            d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"
+            fill="currentColor"></path>
+        </svg>
+    </a>
+  </div>
+
   <p>{desc}</p>
+  <div class="gap-1 flex flex-wrap  w-fit">
+    {techs.map((tech) => (
+      <TechCard tech={tech} ></TechCard>
+    ))}
+  </div>
+  
+  
 </card>
+
+
+<script type="module">
+  const buttons = document.querySelectorAll(".shiny");
+
+  const mediaQuery = window.matchMedia("(min-width: 640px)");
+
+  function handleMouseEvents(button) {
+    button.addEventListener("mousemove", (e) => {
+      const { x, y } = button.getBoundingClientRect();
+      const xPos = e.clientX - x;
+      const yPos = e.clientY - y;
+      button.querySelector("input").style.maskImage =
+        `radial-gradient(30% 30px at ${xPos}px ${yPos}px, black 45%, transparent)`;
+      button.querySelector("div").style.background =
+        `radial-gradient(600px circle at ${xPos}px ${yPos}px, rgba(97, 97, 97, 0.1), transparent 60%)`;
+    });
+    button.addEventListener("mouseenter", (e) => {
+      button.querySelector("input").style.opacity = 1;
+      button.querySelector("div").style.opacity = 1;
+    });
+    button.addEventListener("mouseleave", (e) => {
+      button.querySelector("input").style.opacity = 0;
+      button.querySelector("div").style.opacity = 0;
+    });
+  }
+
+  function setupListeners() {
+    if (mediaQuery.matches) {
+      buttons.forEach(handleMouseEvents);
+    }
+  }
+
+  mediaQuery.addEventListener("change", setupListeners);
+  setupListeners();
+</script>
