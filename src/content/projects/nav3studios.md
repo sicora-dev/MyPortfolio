@@ -2,7 +2,7 @@
 id: 0
 title: Nav3studios.com
 desc: Web de Reservas para mi Estudio de Música
-url: https://github.com/sicora-dev/nav3studios.netlify.app
+url: https://nav3studios.netlify.app
 icon: https://raw.githubusercontent.com/sicora-dev/nav3studios.netlify.app/refs/heads/main/client/public/assets/logo_nav3_ico.ico
 repo: https://github.com/sicora-dev/nav3studios.netlify.app
 stack: React,Node.js,Postgresql,Tailwind

@@ -1,0 +1,139 @@
+---
+import { getCollection, render } from "astro:content";
+const education = await getCollection("education");
+---
+
+<div class="flex flex-col md:items-center items-start gap-2">
+  <h2 class="text-xl font-bold self-start">Educación</h2>
+  <div
+    class="md:grid md:grid-cols-[1fr_3px_1fr] w-full h-auto m-0 flex flex-col md:p-5 md:gap-0 gap-2"
+  >
+    {
+      education
+        .sort((a, b) => a.data.id - b.data.id)
+        .map(async (item, index) => {
+        const { Content } = await render(item);
+        return (
+          <>
+            {item.data.id % 2 !== 0 && (
+            <div class="hidden md:flex flex-wrap sm:flex-nowrap gap-2 w-full justify-between">
+                <div class="flex flex-col w-full items-end pr-5 mr-5">
+                    <p class="inline-block min-w-max text-sm">{new Date(item.data.startDate).getFullYear()}-{new Date(item.data.endDate).getFullYear()}</p>
+                    <h4><a href={item.data.url} target="_blank">{item.data.center}</a></h4>
+                </div>
+                
+              </div>
+            <div class="relative bg-light-miniCard dark:bg-dark-miniCard w-1 h-full">
+                <div class="absolute md:border border-neutral-700 bg-light-miniCard dark:bg-dark-miniCard dark:border-neutral-300 left-1/2 top-0 md:w-4 md:h-4 h-0 w-0 rounded-full  transform -translate-x-[50%]" />
+              </div>
+            <div
+              class={`md:ml-5 md:mb-5 p-5 bg-transparent rounded-md transition-all break-words shiny after:bg-light-shiny after:dark:bg-dark-shiny relative overflow-hidden`}
+            >
+                <input
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full cursor-default rounded-[0.310rem] border transition-opacity duration-500 placeholder:select-none
+    dark:border-white/50 border-black/50 opacity-1 sm:opacity-0"
+                style="
+    mask-image: radial-gradient(30% 50px at 16px 19px, black 45%, transparent);
+    background-color: transparent;
+    "
+              />
+                <input
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full cursor-default rounded-[0.310rem] border transition-opacity duration-500 placeholder:select-none
+dark:border-white/50 border-black/50 sm:opacity-0 opacity-1"
+                style="
+  mask-image: radial-gradient(30% 50px at 50px 88px, black 45%, transparent);
+  background-color: transparent;
+"
+              />
+                <div
+                aria-hidden="true"
+                class="pointer-events-none absolute -inset-px rounded-md opacity-0 transition duration-300"
+                style="
+  background: radial-gradient(600px circle at 24px 103px, rgba(97, 97, 97, 0.1), transparent 60%);
+"
+              />
+              <div class=" flex flex-wrap sm:flex-nowrap gap-2 w-full justify-between">
+                <h3>{item.data.course}</h3>
+                <div class="flex flex-col w-fit md:hidden">
+                    <p class=" inline-block min-w-max text-sm">{new Date(item.data.startDate).getFullYear()}-{new Date(item.data.endDate).getFullYear()}</p>
+                    <h4><a href={item.data.url} target="_blank">{item.data.center}</a></h4>
+                </div>
+                
+              </div>
+              <div class="text-sm">
+                  <Content />
+                </div>
+            </div>
+            )}    
+            {item.data.id % 2 === 0 && (
+            <div
+              class={`md:mr-5 md:mb-5 p-5 bg-transparent rounded-md transition-all break-words shiny after:bg-light-shiny after:dark:bg-dark-shiny relative overflow-hidden`}
+            >
+                <input
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full cursor-default rounded-[0.310rem] border transition-opacity duration-500 placeholder:select-none
+dark:border-white/50 border-black/50 opacity-1 sm:opacity-0"
+                style="
+  mask-image: radial-gradient(30% 50px at 16px 19px, black 45%, transparent);
+  background-color: transparent;
+"
+              />
+                <input
+                aria-hidden="true"
+                class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full cursor-default rounded-[0.310rem] border transition-opacity duration-500 placeholder:select-none
+dark:border-white/50 border-black/50 sm:opacity-0 opacity-1"
+                style="
+  mask-image: radial-gradient(30% 50px at 50px 88px, black 45%, transparent);
+  background-color: transparent;
+"
+              />
+                <div
+                aria-hidden="true"
+                class="pointer-events-none absolute -inset-px rounded-md opacity-0 transition duration-300"
+                style="
+  background: radial-gradient(600px circle at 24px 103px, rgba(97, 97, 97, 0.1), transparent 60%);
+"
+              />
+              <div class=" flex flex-wrap sm:flex-nowrap gap-2 w-full justify-between">
+                <h3>{item.data.course}</h3>
+                <div class="flex flex-col w-fit md:hidden">
+                    <p class="inline-block min-w-max text-sm">{new Date(item.data.startDate).getFullYear()}-{new Date(item.data.endDate).getFullYear()}</p>
+                    <h4><a href={item.data.url} target="_blank">{item.data.center}</a></h4>
+                </div>
+                
+              </div>
+                
+                
+                <div class="text-sm">
+                    <Content />
+                </div>
+            </div>
+            <div class="relative bg-light-miniCard dark:bg-dark-miniCard w-1 h-full">
+                <div class="absolute md:border border-neutral-700 bg-light-miniCard dark:bg-dark-miniCard dark:border-neutral-300 left-1/2 top-0 md:w-4 md:h-4 h-0 w-0 rounded-full  transform -translate-x-[50%]" />
+              </div>
+            <div class="hidden md:flex flex-wrap sm:flex-nowrap gap-2 w-full justify-between">
+                <div class="flex flex-col w-full items-start pl-5 ml-5">
+                    <p class="inline-block min-w-max text-sm">{new Date(item.data.startDate).getFullYear()}-{new Date(item.data.endDate).getFullYear()}</p>
+                    <h4><a href={item.data.url} target="_blank">{item.data.center}</a></h4>
+                </div>
+                
+              </div>
+            )}
+          </>
+        )})
+    }
+  </div>
+</div>
+
+<style>
+  h3 {
+    font-weight: bold;
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
+  h4 {
+    font-style: italic;
+  }
+</style>

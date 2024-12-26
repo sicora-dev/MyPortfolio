@@ -16,18 +16,23 @@ const projects = defineCollection({
 
 const education = defineCollection({
   schema: z.object({
+    id: z.number(),
     course: z.string(),
     startDate: z.date(),
     endDate: z.date(),
     center: z.string(),
+    url: z.string().url()
   }),
 });
 
 const experience = defineCollection({
   schema: z.object({
+    id: z.number(),
+    company: z.string(),
     title: z.string(),
     startDate: z.date(),
     endDate: z.date(),
+    url: z.string().url()
   }),
 });
 export const collections = { projects, education, experience };

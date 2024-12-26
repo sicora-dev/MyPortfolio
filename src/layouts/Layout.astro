@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Siro's Portfolio</title>
+    
     <script>
       if (
         localStorage.theme === "dark" ||
@@ -18,7 +19,7 @@
       }
     </script>
   </head>
-  <body class="leading-loose flex justify-center bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text font-body">
+  <body transition:name="hero" transition:animate="slide" class="leading-loose flex justify-center bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text font-body h-full">
     <slot />
   </body>
 </html>

@@ -11,7 +11,7 @@ const techs = stack.split(',')
   <input
     aria-hidden="true"
     class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full cursor-default rounded-[0.310rem] border transition-opacity duration-500 placeholder:select-none
-    border-white/50 opacity-1 sm:opacity-0"
+    dark:border-white/50 border-black/50 opacity-1 sm:opacity-0"
     style="
       mask-image: radial-gradient(30% 50px at 16px 19px, black 45%, transparent);
       background-color: transparent;
@@ -20,7 +20,7 @@ const techs = stack.split(',')
   <input
     aria-hidden="true"
     class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full cursor-default rounded-[0.310rem] border transition-opacity duration-500 placeholder:select-none
-    border-white/50 sm:opacity-0 opacity-1"
+    dark:border-white/50 border-black/50 sm:opacity-0 opacity-1"
     style="
       mask-image: radial-gradient(30% 50px at 50px 88px, black 45%, transparent);
       background-color: transparent;
@@ -39,7 +39,7 @@ const techs = stack.split(',')
       class="font-bold flex items-center gap-1 cursor-pointer hover:underline underline underline-offset-4 sm:no-underline group"
     >
       <img class="w-4 h-4 text-[#72B01D]" src={icon} />
-      <a href=`${url}` target="_blank">{title}</a>
+      <a class="project" data-url={url} data-repo={repo} href=`${url}` target="_blank">{title}</a>
 
       <svg
         class="group-hover:scale-105 transition ease-in-out"
@@ -57,7 +57,7 @@ const techs = stack.split(',')
           stroke-linejoin="round"></path>
       </svg>
     </h3>
-    <a href={repo} target="_blank">
+    <a class="hidden sm:inline" href={repo} target="_blank">
       <svg
           viewBox="0 0 256 250"
           width="15"
@@ -74,7 +74,7 @@ const techs = stack.split(',')
   </div>
 
   <p>{desc}</p>
-  <div class="gap-1 flex flex-wrap  w-fit">
+  <div class="gap-1 flex flex-wrap w-fit">
     {techs.map((tech) => (
       <TechCard tech={tech} ></TechCard>
     ))}
@@ -85,8 +85,28 @@ const techs = stack.split(',')
 
 
 <script type="module">
-  const buttons = document.querySelectorAll(".shiny");
+  function updateLink(link) {
+    const url = link.getAttribute('data-url');
+    const repo = link.getAttribute('data-repo');
+    if (window.innerWidth >= 640) { // sm: breakpoint in Tailwind CSS
+      link.href = url;
+    } else {
+      link.href = repo;
+    }
+  }
 
+  function initializeLinks() {
+    const links = document.querySelectorAll('.project');
+    links.forEach(link => {
+      updateLink(link);
+      window.addEventListener('resize', () => updateLink(link));
+    });
+  }
+
+  window.addEventListener('load', initializeLinks);
+  window.addEventListener('resize', setupListeners)
+
+  const buttons = document.querySelectorAll(".shiny");
   const mediaQuery = window.matchMedia("(min-width: 640px)");
 
   function handleMouseEvents(button) {

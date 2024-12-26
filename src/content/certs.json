@@ -1,0 +1,22 @@
+[
+    {
+        "title": "CCNA R&S",
+        "description": "Conceptos fundamentales de redes y subredes, configuración de routers y switches, esquemas de direccionamientos IP..."
+    },
+    {
+        "title": "CyberOps Associate",
+        "description": "Creación de entornos seguros, clasificación de ataques, monitoreo de redes, evasión de ataques..."
+    },
+    {
+        "title": "Java Fundamentals",
+        "description": "Conceptos básicos de la programación orientada a objetos (POO) y Java"
+    },
+    {
+        "title": "Oracle Database Programming with SQL",
+        "description": "Fundamentos de programación en Oracle SQL"
+    },
+    {
+        "title": "MOS: Associate",
+        "description": "Microsoft Office (Excel, Word, PowerPoint, Access)"
+    }
+]
