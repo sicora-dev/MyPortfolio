@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard.astro";
 import Experience from "./Experience.astro";
 import Education from "./Education.astro";
 import Skills from "./Skills.astro";
+import Footer from "./Footer.astro"
 import Cert from "./Cert.astro";
 import certs from "../content/certs.json";
 
@@ -312,12 +313,12 @@ const skills: SkillsType = {
           ))
         }
       </div>
-        
-     
-      
     </div>
     
   </section>
+  <footer class="w-full rounded-md bg-light-background/90 dark:bg-dark-background/90 flex justify-center my-5 p-3">
+    <Footer></Footer>
+  </footer>
 </main>
 
 <style>
