@@ -1,5 +1,5 @@
 <div align="left" style="position: relative;">
-<img src="https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/favicon.svg" align="right" width="30%" style="margin: 20px 0 0 20px;">
+<img src="https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/favicon.svg" align="right" width="30%" style="margin: -20px 0 0 20px;">
 <h1>MI PORTFOLIO</h1>
 <p align="left">
 	<em><code>❯ MyPortfolio</code></em>
