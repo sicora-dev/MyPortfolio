@@ -1,5 +1,5 @@
-<div align="left" style="position: relative;">
-<img src="https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/favicon.svg" align="right" width="30%" style="margin: -20px 0 0 20px;">
+
+<img src="https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/favicon.svg" align="center" width="30%">
 <h1>MI PORTFOLIO</h1>
 <p align="left">
 	<em><code>❯ MyPortfolio</code></em>
@@ -16,7 +16,7 @@
 	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black" alt="JavaScript">
 	<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white" alt="TypeScript">
 </p>
-</div>
+
 <br clear="right">
 
 ## 🔗 Quick Links
