@@ -9,7 +9,7 @@
 	<img src="https://img.shields.io/github/languages/top/sicora-dev/MyPortfolio?style=for-the-badge&color=4c4c4c" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/sicora-dev/MyPortfolio?style=for-the-badge&color=4c4c4c" alt="repo-language-count">
 </p>
-<p align="left">Built with the tools and technologies:</p>
+<p align="left">Construido con las herramientas y tecnologías:</p>
 <p align="left">
   <img src="https://img.shields.io/badge/Astro-BC52EE.svg?style=for-the-badge&logo=Astro&logoColor=white" alt="Astro">
 	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black" alt="JavaScript">
@@ -18,7 +18,7 @@
 
 <br clear="right">
 
-## 🔗 Quick Links
+## 🔗 Accesos directos
 
 - [📍 Resumen](#-overview)
 - [📁 Estructura](#-project-structure)
