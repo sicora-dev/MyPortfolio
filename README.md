@@ -4,7 +4,6 @@
 	<em><code>❯ MyPortfolio</code></em>
 </p>
 <p align="left">
-	<img src="https://img.shields.io/github/license/sicora-dev/MyPortfolio?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=4c4c4c" alt="license">
 	<img src="https://img.shields.io/github/last-commit/sicora-dev/MyPortfolio?style=for-the-badge&logo=git&logoColor=white&color=4c4c4c" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/sicora-dev/MyPortfolio?style=for-the-badge&color=4c4c4c" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/sicora-dev/MyPortfolio?style=for-the-badge&color=4c4c4c" alt="repo-language-count">
