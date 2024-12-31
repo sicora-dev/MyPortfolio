@@ -310,8 +310,8 @@ const skills: SkillsType = {
       <h2 class="text-xl font-bold">Certificados</h2>
       <div class="flex flex-wrap gap-2">
         {
-          certs.map((cert) => (
-            <Cert title={cert.title} desc={cert.description} />
+          certs.map((cert, index) => (
+            <Cert title={cert.title} desc={cert.description} id={`modal-${index}`} />
           ))
         }
       </div>

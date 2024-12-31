@@ -1,5 +1,5 @@
 ---
-const { title, desc } = Astro.props;
+const { title, desc, id } = Astro.props;
 ---
 
 <card
@@ -22,10 +22,10 @@ background: radial-gradient(600px circle at 24px 103px, rgba(97, 97, 97, 0.1), t
 "
   >
   </div>
-  <h3 class="cursor-pointer" onclick="openModal()">{title}</h3>
+  <h3 class="cursor-pointer" onclick={`openModal('${id}')`}>{title}</h3>
 </card>
 <div
-  id="modal"
+  id={id}
   class="modal fixed inset-0 hidden bg-neutral-700/30 dark:bg-neutral-500/30 bg-opacity-50 flex items-center justify-center z-50"
 >
   <div
@@ -33,7 +33,7 @@ background: radial-gradient(600px circle at 24px 103px, rgba(97, 97, 97, 0.1), t
   >
     <span
       class="close absolute top-2 right-2 text-gray-500 dark:text-gray-300 text-2xl cursor-pointer"
-      onclick="closeModal()">&times;</span
+      onclick={`closeModal('${id}')`}>&times;</span
     >
     <h3 class="text-xl font-bold mb-4">{title}</h3>
     <p>{desc}</p>
@@ -54,18 +54,20 @@ background: radial-gradient(600px circle at 24px 103px, rgba(97, 97, 97, 0.1), t
   }
 </style>
 <script client:load>
-    function openModal() {
-      document?.getElementById('modal')?.classList.remove('hidden');
+   function openModal(modalId) {
+      document?.getElementById(modalId)?.classList.remove('hidden');
     }
   
-    function closeModal() {
-      document?.getElementById('modal')?.classList.add('hidden');
+    function closeModal(modalId) {
+      document?.getElementById(modalId)?.classList.add('hidden');
     }
   
     window.onclick = function(event) {
-      const modal = document.getElementById('modal');
-      if (event.target == modal) {
-        modal?.classList.add('hidden');
-      }
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target == modal) {
+          modal?.classList.add('hidden');
+        }
+      });
     }
   </script>
