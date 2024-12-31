@@ -1,5 +1,4 @@
 
-<img src="https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/favicon.svg" align="center" width="30%">
 <h1>MI PORTFOLIO</h1>
 <p align="left">
 	<em><code>❯ MyPortfolio</code></em>
