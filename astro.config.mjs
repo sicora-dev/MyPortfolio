@@ -6,6 +6,6 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://sicoradev.com',
+  site: 'https://portfolio.sicoradev.com',
   base: '/',
 });
