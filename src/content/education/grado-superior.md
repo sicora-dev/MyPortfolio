@@ -8,4 +8,4 @@ url: https://joyfe.iepgroup.es
 ---
 
 
-Estoy aprendiendo muchos lenguajes distintos como **Python, Kotlin, C#, AL (Business Central), Visual Basics, Unity, Oracle SQL** entre otros, cloud con **AWS** y además, mi **aprendizaje autodidacta**.
+Aprendí muchos lenguajes distintos como **Python, Kotlin, C#, AL (Business Central), Visual Basics, Unity, Oracle SQL** entre otros, cloud con **AWS** y además, mi **aprendizaje autodidacta**.

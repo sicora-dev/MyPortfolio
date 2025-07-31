@@ -1,8 +1,8 @@
 ---
 id: 1
 title: DevPath.es
-desc: Mentor personal impulsado por IA
-url: https://dev-path-v2.vercel.app
+desc: Mentor personal de programación impulsado por IA
+url: https://devpath.sicoradev.com
 icon: https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg
 repo: https://github.com/sicora-dev/DevPath
 stack: React,Gemini API,Tailwind
