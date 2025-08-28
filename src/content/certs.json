@@ -1,22 +1,52 @@
 [
     {
+        "title": "JavaScript Essentials",
+        "description": "Conceptos básicos de JavaScript, manipulación del DOM, eventos, funciones, arreglos, objetos...",
+        "link": "https://www.credly.com/badges/cca93e2b-bf0f-4f83-a1c7-ac81f1a34a70/public_url"
+    },
+    {
+        "title": "AWS Academy Cloud Developing",
+        "description": "Uso de SDK/CLI, serverless (Lambda/API Gateway/Step Functions), acceso a S3/DynamoDB, colas SQS/SNS, buenas prácticas de despliegue/monitoreo.",
+        "link": "https://www.credly.com/badges/7240533e-ebaf-491d-b0db-41ffad81ee99/linked_in_profile"
+    },
+    {
+        "title": "AWS Academy Cloud Architecting",
+        "description": "diseño de soluciones escalables, seguras y coste-óptimas (EC2/ECS, VPC, S3, RDS/DynamoDB), Well-Architected, IAM/seguridad",
+        "link": "https://www.credly.com/badges/dd9f88aa-e565-4b37-ae31-d63d73487e31/linked_in_profile"
+    },
+    {
+        "title": "Python Essentials 1",
+        "description": "fundamentos — sintaxis, tipos, operadores, control de flujo, funciones y colecciones básicas",
+        "link": "https://www.credly.com/badges/7a97cac4-a800-41b3-b961-5972ce158d13"
+    },
+    {
+        "title": "Python Essentials 2",
+        "description": "intermedio — OOP, módulos/paquetes, excepciones avanzadas, archivos, comprensiones/iteradores",
+        "link": "https://www.credly.com/badges/7c44f559-2292-4ec1-8c27-91cfa0b7fd5a"
+    },
+    {
         "title": "CCNA R&S",
-        "description": "Conceptos fundamentales de redes y subredes, configuración de routers y switches, esquemas de direccionamientos IP..."
+        "description": "Conceptos fundamentales de redes y subredes, configuración de routers y switches, esquemas de direccionamientos IP...",
+        "link": "https://www.linkedin.com/in/siro-cornejo-raez/details/certifications/1734824821430/single-media-viewer/?profileId=ACoAADm23yUBQNnrETw2P2GMv5pJ9PWXaz0DiiM"
     },
     {
         "title": "CyberOps Associate",
-        "description": "Creación de entornos seguros, clasificación de ataques, monitoreo de redes, evasión de ataques..."
+        "description": "Creación de entornos seguros, clasificación de ataques, monitoreo de redes, evasión de ataques...",
+        "link": "https://www.linkedin.com/in/siro-cornejo-raez/details/certifications/776621404/multiple-media-viewer/?profileId=ACoAADm23yUBQNnrETw2P2GMv5pJ9PWXaz0DiiM&treasuryMediaId=1734824789884"
     },
     {
         "title": "Java Fundamentals",
-        "description": "Conceptos básicos de la programación orientada a objetos (POO) y Java"
+        "description": "Conceptos básicos de la programación orientada a objetos (POO) y Java",
+        "link": "https://www.linkedin.com/in/siro-cornejo-raez/details/certifications/1728305070357/single-media-viewer/?profileId=ACoAADm23yUBQNnrETw2P2GMv5pJ9PWXaz0DiiM"
     },
     {
         "title": "Oracle Database Programming with SQL",
-        "description": "Fundamentos de programación en Oracle SQL"
+        "description": "Fundamentos de programación en Oracle SQL",
+        "link": "https://www.linkedin.com/in/siro-cornejo-raez/details/certifications/1428783746/multiple-media-viewer/?profileId=ACoAADm23yUBQNnrETw2P2GMv5pJ9PWXaz0DiiM&treasuryMediaId=1734448088421"
     },
     {
         "title": "MOS: Associate",
-        "description": "Microsoft Office (Excel, Word, PowerPoint, Access)"
+        "description": "Microsoft Office (Excel, Word, PowerPoint, Access)",
+        "link": "https://www.credly.com/badges/f6a41feb-0324-47fa-9e6c-b0b7cafa6748/linked_in_profile"
     }
 ]

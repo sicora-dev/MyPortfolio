@@ -1,5 +1,5 @@
 ---
-const { title, desc, id } = Astro.props;
+const { title, desc, link, id } = Astro.props;
 ---
 
 <card
@@ -22,11 +22,11 @@ background: radial-gradient(600px circle at 24px 103px, rgba(97, 97, 97, 0.1), t
 "
   >
   </div>
-  <h3 class="cursor-pointer" onclick={`openModal('${id}')`}>{title}</h3>
+  <h3 class="cursor-pointer hover:underline underline-offset-2 transition-all duration-300" onclick={`openModal('${id}')`}>{title}</h3>
 </card>
 <div
   id={id}
-  class="modal fixed inset-0 hidden bg-neutral-700/30 dark:bg-neutral-500/30 bg-opacity-50 flex items-center justify-center z-50"
+  class="modal fixed hidden inset-0 bg-neutral-700/30 dark:bg-neutral-500/30 bg-opacity-50 flex items-center justify-center z-50"
 >
   <div
     class="modal-content bg-light-miniCard dark:bg-dark-miniCard p-6 rounded-lg shadow-lg relative w-1/2"
@@ -35,7 +35,33 @@ background: radial-gradient(600px circle at 24px 103px, rgba(97, 97, 97, 0.1), t
       class="close absolute top-2 right-2 text-gray-500 dark:text-gray-300 text-2xl cursor-pointer"
       onclick={`closeModal('${id}')`}>&times;</span
     >
-    <h3 class="text-xl font-bold mb-4">{title}</h3>
+    <div class="flex items-center mb-4 text-xl gap-1 font-bold">
+      <h3>{title}</h3>
+      {link && (
+        <a
+          href={link}
+          class="flex hover:-translate-y-[0.15rem] transition-all duration-200"
+          target="_blank"
+          aria-label="Abrir certificado"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="currentColor"
+          >
+            <path
+              d="M14 3h7v7M10 14L21 3M5 5v14h14"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      )}
+    </div>
     <p>{desc}</p>
   </div>
 </div>
@@ -46,8 +72,6 @@ background: radial-gradient(600px circle at 24px 103px, rgba(97, 97, 97, 0.1), t
   }
   h3 {
     font-weight: bold;
-    text-decoration-line: underline;
-    text-underline-offset: 4px;
   }
   h4 {
     font-style: italic;

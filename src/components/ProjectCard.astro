@@ -1,6 +1,6 @@
 ---
 import TechCard from "./TechCard.astro";
-const { title, desc, url, icon, repo, stack } = Astro.props;
+const { title, desc, link, url, icon, repo, stack } = Astro.props;
 const techs = stack.split(',')
 
 ---
@@ -75,7 +75,7 @@ const techs = stack.split(',')
 
   <p>{desc}</p>
   <div class="gap-1 flex flex-wrap w-fit">
-    {techs.map((tech) => (
+    {techs.map((tech: string) => (
       <TechCard tech={tech} ></TechCard>
     ))}
   </div>

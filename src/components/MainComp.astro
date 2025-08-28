@@ -30,17 +30,19 @@ const skills: SkillsType = {
     JavaScript: "javascript",
     Astro: "astro",
     React: "react",
+    NextJS: "nextjs",
+    Csharp: "csharp",
   },
   backend: {
     NodeJS: "nodejs",
     Python: "python",
-    Csharp: "csharp",
     MySql: "mysql",
     Postgresql: "postgresql",
     OracleSQL: "oracle",
   },
   mobile: {
     Kotlin: "kotlin",
+    Flutter: "flutter",
   },
   cloud: {
     AWS: "aws",
@@ -313,7 +315,7 @@ const skills: SkillsType = {
       <div class="flex flex-wrap gap-2">
         {
           certs.map((cert, index) => (
-            <Cert title={cert.title} desc={cert.description} id={`modal-${index}`} />
+            <Cert title={cert.title} desc={cert.description} link={cert.link} id={`modal-${index}`} />
           ))
         }
       </div>
@@ -332,8 +334,6 @@ const skills: SkillsType = {
   }
   h3 {
     font-weight: bold;
-    text-decoration-line: underline;
-    text-underline-offset: 4px;
   }
   h4 {
     font-style: italic;
