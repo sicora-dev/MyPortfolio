@@ -1,0 +1,162 @@
+{
+    "nav.projects": "Key Projects",
+    "nav.experience": "Experience",
+    "nav.education": "Education",
+    "nav.skills": "Skills",
+    "nav.certifications": "Certifications",
+    "hero.about": "👋 Hi! I'm Siro and <strong>computer science has always been my passion</strong>. I love solving problems, continuously learning, and exploring both <strong>frontend and backend</strong> technologies. I'm always looking for new challenges that help me grow as a developer.",
+    "hero.role": "Fullstack Developer & AI",
+    "hero.location": "Madrid, Spain",
+    "projects": [
+        {
+            "id": 5,
+            "title": "AWS Cloud Architecting",
+            "desc": "CRM platform for Amazon sellers, featuring real-time chat and AI agents.",
+            "url": "https://sellervate.com",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/skills/aws.svg",
+            "repo": "https://sellervate.com",
+            "stack": "AWS,Nextjs,Python"
+        },
+        {
+            "id": 4,
+            "title": "ChatPol",
+            "desc": "Transforming a slow monolithic chatbot into a high-speed multi-agent RAG system for police inquiries.",
+            "url": "#",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "repo": "#",
+            "stack": "Python,Postgresql,LangChain"
+        },
+        {
+            "id": 3,
+            "title": "Costume Distributor Pipeline",
+            "desc": "Multi-agent AI system that processes supplier images and automatically generates complete product listings (color, size, optimized metadata).",
+            "url": "#",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "repo": "#",
+            "stack": "Python,Agents,Computer Vision"
+        },
+        {
+            "id": 2,
+            "title": "DevPath",
+            "desc": "An AI-powered platform for learning and practicing programming, designed for all skill levels.",
+            "url": "https://devpath.sicoradev.com",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "repo": "https://github.com/sicora-dev/DevPath",
+            "stack": "React,Gemini API,Astro"
+        },
+        {
+            "id": 1,
+            "title": "Portfolio",
+            "desc": "My personal portfolio, built with Astro, featuring a modern and minimalist design.",
+            "url": "https://portfolio.sicoradev.com",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/skills/astro.svg",
+            "repo": "https://github.com/sicora-dev/MyPortfolio",
+            "stack": "Astro,Css"
+        }
+    ],
+    "experience": [
+        {
+            "id": 5,
+            "company": "Artekia",
+            "title": "Co-Founder",
+            "date": "2025 - Present",
+            "url": "https://artekia.com",
+            "description": "Software and AI boutique for startups and SMEs, focused on building useful products, automating processes, and solving real business problems with technical quality and transparency."
+        },
+        {
+            "id": 4,
+            "company": "Sellervate",
+            "title": "Full Stack Frontend Developer",
+            "date": "Feb 2025 - Present",
+            "url": "https://sellervate.com",
+            "description": "Developed Sellervate's web application using Next.js, Python, PostgreSQL, and AWS."
+        },
+        {
+            "id": 3,
+            "company": "Dars Telecom S.L.",
+            "title": "IT Support Technician",
+            "date": "2023 - 2024",
+            "url": "https://darstelecom.com",
+            "description": "Led the layout and pre-production area within the support department, working with technologies such as vSphere, Python, Nagios, Whisper AI, and network administration."
+        },
+        {
+            "id": 2,
+            "company": "Dars Telecom S.L.",
+            "title": "Support Technician (Internship)",
+            "date": "Mar 2023 - Jun 2023",
+            "url": "https://darstelecom.com",
+            "description": "Completed my vocational training internship here, where I gained hands-on experience with technologies such as Nagios, ESXi, and server administration."
+        }
+    ],
+    "education": [
+        {
+            "id": 4,
+            "course": "Master's in Artificial Intelligence and Big Data",
+            "date": "2025 - Present",
+            "center": "Tajamar",
+            "url": "https://tajamar.es",
+            "description": "Deepening my expertise in data analysis, machine learning, generative AI, AI agent systems, and neural networks."
+        },
+        {
+            "id": 3,
+            "course": "HND in Web Application Development (DAW)",
+            "date": "2025 - Present",
+            "center": "Colegio Joyfe",
+            "url": "https://joyfe.es",
+            "description": "Consolidating server-side web development, interface development, Web3, and DevOps."
+        },
+        {
+            "id": 2,
+            "course": "HND in Multiplatform Application Development (DAM)",
+            "date": "2023 - 2025",
+            "center": "Colegio Joyfe",
+            "url": "https://joyfe.es",
+            "description": "Learned a wide range of programming languages including Python, Kotlin, C#, AL, Visual Basic, Unity, and Oracle SQL."
+        },
+        {
+            "id": 1,
+            "course": "Vocational Diploma in Microcomputer Systems and Networks (SMR)",
+            "date": "2021 - 2023",
+            "center": "Colegio Joyfe",
+            "url": "https://joyfe.es",
+            "description": "Trained as an IT technician, building a strong foundation in networking, hardware, and programming concepts."
+        }
+    ],
+    "certifications": [
+        {
+            "title": "Azure AI Engineer Associate",
+            "description": "Design and implement AI solutions using Azure AI services, Azure AI Search, and Azure Open AI.",
+            "link": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/"
+        },
+        {
+            "title": "Fabric Data Engineer Associate",
+            "description": "Design, build, and implement enterprise-scale data analytics solutions.",
+            "link": "https://learn.microsoft.com/en-us/credentials/certifications/fabric-data-engineer/"
+        },
+        {
+            "title": "Azure Database Administrator Associate",
+            "description": "Understanding of core data concepts and their implementation using Microsoft Azure data services.",
+            "link": "https://learn.microsoft.com/en-us/credentials/certifications/azure-database-administrator-associate/"
+        },
+        {
+            "title": "CCNA R&S",
+            "description": "Fundamental concepts of networks and subnetting, including router and switch configuration.",
+            "link": "https://www.cisco.com/c/m/en_sg/partners/ccna.html"
+        },
+        {
+            "title": "CyberOps Associate",
+            "description": "Creation of secure environments, attack classification, network monitoring, and evasion techniques.",
+            "link": "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/cyberops-associate.html"
+        },
+        {
+            "title": "AWS Cloud Developing",
+            "description": "Build, deploy, and manage cloud applications and infrastructure on AWS.",
+            "link": "https://aws.amazon.com/certification/certified-developer-associate/"
+        },
+        {
+            "title": "AWS Cloud Architecting",
+            "description": "Identify features to build resilient, secure, and highly available IT solutions on AWS Cloud.",
+            "link": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+        }
+    ]
+}

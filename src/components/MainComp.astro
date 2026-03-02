@@ -1,16 +1,19 @@
 ---
-import { getCollection } from "astro:content";
 import ProjectCard from "./ProjectCard.astro";
 import Experience from "./Experience.astro";
 import Education from "./Education.astro";
 import Skills from "./Skills.astro";
 import Footer from "./Footer.astro";
 import Cert from "./Cert.astro";
-import certs from "../content/certs.json";
+import { useTranslations } from "../i18n/utils";
 
-const projects = await getCollection("projects");
-const experience = await getCollection("experience");
-const education = await getCollection("education");
+const { lang = 'es' } = Astro.props;
+const t = useTranslations(lang);
+
+const projects = t('projects');
+const experience = t('experience');
+const education = t('education');
+const certs = t('certifications');
 
 type SkillArea = {
   [key: string]: string;
@@ -92,6 +95,13 @@ const skills: SkillsType = {
         </svg>
       </a>
 
+      <a
+        href={lang === 'es' ? '/en' : '/'}
+        class="rounded-md hover:bg-light-text/10 hover:dark:bg-dark-text/10 px-2 py-1 flex justify-center items-center font-bold"
+        aria-label="Change language"
+      >
+        {lang === 'es' ? 'EN' : 'ES'}
+      </a>
       <button
         id="darkModeSwitch"
         class="rounded-md hover:bg-light-text/10 hover:dark:bg-dark-text/10 px-2 py-1 w-[36px] h-[36px] flex items-center"
@@ -133,13 +143,7 @@ const skills: SkillsType = {
   <section
     class="w-full flex sm:flex-row flex-col items-start gap-10 py-5 text-light-mainText dark:text-dark-mainText p-3"
   >
-    <p>
-      👋 ¡Hola! Soy Siro y desde siempre <strong
-        >la informática ha sido mi pasión</strong
-      >. Me encanta resolver problemas, aprender constantemente y explorar
-      tecnologías <strong>frontend y backend</strong>. Siempre estoy buscando
-      nuevos retos que me hagan crecer como desarrollador.
-    </p>
+    <p set:html={t('hero.about')}></p>
 
     <ul class="min-w-fit">
       <li class="flex gap-3 items-center">
@@ -181,7 +185,7 @@ const skills: SkillsType = {
               stroke-linecap="round"
               stroke-linejoin="round"></path>
           </g></svg
-        >Junior Developer
+        >{t('hero.role')}
       </li>
       <li class="flex gap-3 items-center">
         <svg
@@ -201,7 +205,7 @@ const skills: SkillsType = {
               stroke-linecap="round"
               stroke-linejoin="round"></path>
           </g></svg
-        >Madrid, España
+        >{t('hero.location')}
       </li>
       <li class="flex gap-3 items-center">
         <a class="flex gap-3 items-center" href="mailto:sirocornejoraez@gmail.com">
@@ -230,19 +234,19 @@ const skills: SkillsType = {
   </section>
 
   <section class="w-full flex flex-col gap-2 p-3">
-    <h2 class="text-xl font-bold">Proyectos mas relevantes</h2>
+    <h2 class="text-xl font-bold">{t('nav.projects')}</h2>
     {
       projects
-        .sort((a, b) => b.data.id - a.data.id)
-        .map((project) => (
+        .sort((a: any, b: any) => b.id - a.id)
+        .map((project: any) => (
           <ProjectCard
-            id={project.data.id}
-            title={project.data.title}
-            desc={project.data.desc}
-            url={project.data.url}
-            icon={project.data.icon}
-            repo={project.data.repo}
-            stack={project.data.stack}
+            id={project.id}
+            title={project.title}
+            desc={project.desc}
+            url={project.url}
+            icon={project.icon}
+            repo={project.repo}
+            stack={project.stack}
           />
         ))
     }
@@ -257,14 +261,14 @@ const skills: SkillsType = {
     </div>
 
     <section class="flex flex-col gap-10 items-start justify-center">
-      <Experience experience={experience} />
-      <Education />
+      <Experience experience={experience} title={t('nav.experience')} />
+      <Education education={education} title={t('nav.education')} />
     </section>
   </section>
 
   <section class="w-full flex flex-col md:flex-row p-3 md:gap-2">
     <div class="flex flex-col min-w-[50%]">
-      <h2 class="text-xl font-bold">Skills</h2>
+      <h2 class="text-xl font-bold">{t('nav.skills')}</h2>
 
       <div class="md:flex flex-col md:gap-2 h-fit hidden">
         {
@@ -311,10 +315,10 @@ const skills: SkillsType = {
       </div>
     </div>
     <div class="flex flex-col flex-wrap gap-2">
-      <h2 class="text-xl font-bold">Certificados</h2>
+      <h2 class="text-xl font-bold">{t('nav.certifications')}</h2>
       <div class="flex flex-wrap gap-2">
         {
-          certs.map((cert, index) => (
+          certs.map((cert: any, index: number) => (
             <Cert title={cert.title} desc={cert.description} link={cert.link} id={`modal-${index}`} />
           ))
         }

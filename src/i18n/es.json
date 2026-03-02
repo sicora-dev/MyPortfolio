@@ -1,0 +1,162 @@
+{
+    "nav.projects": "Proyectos más relevantes",
+    "nav.experience": "Experiencia Laboral",
+    "nav.education": "Educación",
+    "nav.skills": "Skills",
+    "nav.certifications": "Certificados",
+    "hero.about": "👋 ¡Hola! Soy Siro y desde siempre <strong>la informática ha sido mi pasión</strong>. Me encanta resolver problemas, aprender constantemente y explorar tecnologías <strong>frontend y backend</strong>. Siempre estoy buscando nuevos retos que me hagan crecer como desarrollador.",
+    "hero.role": "Fullstack Developer & IA",
+    "hero.location": "Madrid, España",
+    "projects": [
+        {
+            "id": 5,
+            "title": "AWS Cloud Architecting",
+            "desc": "Plataforma CRM para vendedores de Amazon, con chat en tiempo real y agentes de IA.",
+            "url": "https://sellervate.com",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/skills/aws.svg",
+            "repo": "https://sellervate.com",
+            "stack": "AWS,Nextjs,Python"
+        },
+        {
+            "id": 4,
+            "title": "ChatPol",
+            "desc": "Transformando un chatbot monolítico lento en un sistema RAG multi-agente de alta velocidad para consultas policiales.",
+            "url": "#",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "repo": "#",
+            "stack": "Python,Postgresql,LangChain"
+        },
+        {
+            "id": 3,
+            "title": "Pipeline Distribuidora de Disfraces",
+            "desc": "Sistema de IA multi-agente que procesa imágenes de proveedores y genera listados de productos automáticos (color, talla, descripciones y palabras clave optimizadas).",
+            "url": "#",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "repo": "#",
+            "stack": "Python,Agents,Computer Vision"
+        },
+        {
+            "id": 2,
+            "title": "DevPath",
+            "desc": "Mentor personal de programación impulsado por IA, diseñado para todos los niveles, desde principiantes hasta avanzados.",
+            "url": "https://devpath.sicoradev.com",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "repo": "https://github.com/sicora-dev/DevPath",
+            "stack": "React,Gemini API,Astro"
+        },
+        {
+            "id": 1,
+            "title": "Portfolio",
+            "desc": "Mi propio portfolio personal, construido con Astro, con un diseño moderno y minimalista.",
+            "url": "https://portfolio.sicoradev.com",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/skills/astro.svg",
+            "repo": "https://github.com/sicora-dev/MyPortfolio",
+            "stack": "Astro,Css"
+        }
+    ],
+    "experience": [
+        {
+            "id": 5,
+            "company": "Artekia",
+            "title": "Co-Founder",
+            "date": "2025 - Actualidad",
+            "url": "https://artekia.com",
+            "description": "Estudio boutique de software e IA para startups y pymes, enfocado en crear productos útiles, automatizar procesos y resolver problemas comerciales reales con calidad técnica."
+        },
+        {
+            "id": 4,
+            "company": "Sellervate",
+            "title": "Full Stack Frontend Developer",
+            "date": "Feb 2025 - Actualidad",
+            "url": "https://sellervate.com",
+            "description": "Desarrollé la aplicación web de Sellervate utilizando Next.js, Python, PostgreSQL y AWS."
+        },
+        {
+            "id": 3,
+            "company": "Dars Telecom S.L.",
+            "title": "Técnico de Soporte IT",
+            "date": "2023 - 2024",
+            "url": "https://darstelecom.com",
+            "description": "Lideré el área de maquetación y preproducción dentro del departamento de soporte, trabajando con vSphere, Python, Nagios, Whisper AI y administración de redes."
+        },
+        {
+            "id": 2,
+            "company": "Dars Telecom S.L.",
+            "title": "Técnico de Soporte (Prácticas)",
+            "date": "Mar 2023 - Jun 2023",
+            "url": "https://darstelecom.com",
+            "description": "Completé aquí mis prácticas de FP, adquiriendo experiencia práctica con Nagios, ESXi y administración de servidores."
+        }
+    ],
+    "education": [
+        {
+            "id": 4,
+            "course": "Máster en Inteligencia Artificial y Big Data",
+            "date": "2025 - Actualidad",
+            "center": "Tajamar",
+            "url": "https://tajamar.es",
+            "description": "Profundizando en análisis de datos, Machine Learning, IA generativa, sistemas de agentes de IA y redes neuronales."
+        },
+        {
+            "id": 3,
+            "course": "FP Grado Superior en Desarrollo Web (DAW)",
+            "date": "2025 - Actualidad",
+            "center": "Colegio Joyfe",
+            "url": "https://joyfe.es",
+            "description": "Consolidación de servidor (backend), desarrollo de interfaces, Web3 y DevOps."
+        },
+        {
+            "id": 2,
+            "course": "FP Grado Superior en Desarrollo Multiplataforma (DAM)",
+            "date": "2023 - 2025",
+            "center": "Colegio Joyfe",
+            "url": "https://joyfe.es",
+            "description": "Aprendizaje en Python, Kotlin, C#, AL (Business Central), Visual Basic, Unity y Oracle SQL."
+        },
+        {
+            "id": 1,
+            "course": "FP Grado Medio en Sistemas Microinformáticos y Redes (SMR)",
+            "date": "2021 - 2023",
+            "center": "Colegio Joyfe",
+            "url": "https://joyfe.es",
+            "description": "Formación técnica IT con bases sólidas en redes, hardware y programación."
+        }
+    ],
+    "certifications": [
+        {
+            "title": "Azure AI Engineer Associate",
+            "description": "Diseño e implementación de soluciones con Azure AI, Search y Open AI.",
+            "link": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/"
+        },
+        {
+            "title": "Fabric Data Engineer Associate",
+            "description": "Diseño e implementación de soluciones analíticas de datos empresariales.",
+            "link": "https://learn.microsoft.com/en-us/credentials/certifications/fabric-data-engineer/"
+        },
+        {
+            "title": "Azure Database Administrator Associate",
+            "description": "Gestión y comprensión de conceptos de datos principales con Azure Data Services.",
+            "link": "https://learn.microsoft.com/en-us/credentials/certifications/azure-database-administrator-associate/"
+        },
+        {
+            "title": "CCNA R&S",
+            "description": "Conceptos fundamentales de redes, subredes, switches y routers.",
+            "link": "https://www.cisco.com/c/m/en_sg/partners/ccna.html"
+        },
+        {
+            "title": "CyberOps Associate",
+            "description": "Creación de entornos seguros, monitoreo de redes y evasión táctica.",
+            "link": "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/cyberops-associate.html"
+        },
+        {
+            "title": "AWS Cloud Developing",
+            "description": "Uso de AWS para crear, implementar y gestionar aplicaciones en la nube.",
+            "link": "https://aws.amazon.com/certification/certified-developer-associate/"
+        },
+        {
+            "title": "AWS Cloud Architecting",
+            "description": "Diseño de soluciones TI escalables y de alta disponibilidad en AWS.",
+            "link": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+        }
+    ]
+}

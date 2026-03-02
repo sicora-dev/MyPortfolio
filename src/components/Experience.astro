@@ -1,26 +1,22 @@
 ---
-import { getCollection, render } from "astro:content";
-const { experience } = Astro.props;
-
-
+const { experience, title } = Astro.props;
 ---
 
 <div class="flex flex-col md:items-center items-start gap-2">
-    <h2 class="text-xl font-bold self-start">Experiencia Laboral</h2>
+    <h2 class="text-xl font-bold self-start">{title}</h2>
     <div
       class="md:grid md:grid-cols-[1fr_3px_1fr] w-full h-auto m-0 flex flex-col md:p-5 gap-2 md:gap-0"
     >
     {experience
-        .sort((a, b) => a.data.id - b.data.id)
-        .map(async (item, index) => {
-          const { Content } = await render(item);
+        .sort((a, b) => a.id - b.id)
+        .map((item, index) => {
           return (
             <>
-            {item.data.id % 2 !== 0 && (
+            {item.id % 2 !== 0 && (
               <div class="hidden md:flex flex-wrap sm:flex-nowrap gap-2 w-full justify-between">
                 <div class="flex flex-col w-full items-end pr-5 mr-5">
-                    <p class="inline-block min-w-max text-sm">{new Date(item.data.startDate).getFullYear()}-{new Date(item.data.endDate).getFullYear()}</p>
-                    <h4><a href={item.data.url} target="_blank">{item.data.company}</a></h4>
+                    <p class="inline-block min-w-max text-sm">{item.date}</p>
+                    <h4><a href={item.url} target="_blank">{item.company}</a></h4>
                 </div>
                 
               </div>
@@ -56,21 +52,21 @@ const { experience } = Astro.props;
   "
                 />
                 <div class=" flex flex-wrap sm:flex-nowrap gap-2 w-full justify-between">
-                <h3>{item.data.title}</h3>
+                <h3>{item.title}</h3>
                 <div class="flex flex-col w-fit md:hidden">
-                    <p class=" inline-block min-w-max text-sm">{new Date(item.data.startDate).getFullYear()}-{new Date(item.data.endDate).getFullYear()}</p>
-                    <h4><a href={item.data.url} target="_blank">{item.data.company}</a></h4>
+                    <p class=" inline-block min-w-max text-sm">{item.date}</p>
+                    <h4><a href={item.url} target="_blank">{item.company}</a></h4>
                 </div>
                 
               </div>
                 <div class="text-sm">
-                  <Content />
+                  <p>{item.description}</p>
                 </div>
                 
                 
               </div>
             )}
-            {item.data.id % 2 === 0 && (
+            {item.id % 2 === 0 && (
               <div
                 class={`md:mr-5 md:mb-5 p-5 bg-transparent rounded-md transition-all break-words shiny after:bg-light-shiny after:dark:bg-dark-shiny relative overflow-hidden`}
               >
@@ -100,15 +96,15 @@ const { experience } = Astro.props;
   "
                 />
                 <div class=" flex flex-wrap sm:flex-nowrap gap-2 w-full justify-between">
-                <h3>{item.data.title}</h3>
+                <h3>{item.title}</h3>
                 <div class="flex flex-col w-fit md:hidden">
-                    <p class="inline-block min-w-max text-sm">{new Date(item.data.startDate).getFullYear()}-{new Date(item.data.endDate).getFullYear()}</p>
-                    <h4><a href={item.data.url} target="_blank">{item.data.company}</a></h4>
+                    <p class="inline-block min-w-max text-sm">{item.date}</p>
+                    <h4><a href={item.url} target="_blank">{item.company}</a></h4>
                 </div>
                 
               </div>
                 <div class="text-sm">
-                  <Content />
+                  <p>{item.description}</p>
                 </div>
               </div>
               <div class="relative bg-light-miniCard dark:bg-dark-miniCard w-1 h-full">
@@ -116,8 +112,8 @@ const { experience } = Astro.props;
               </div>
               <div class="hidden md:flex flex-wrap sm:flex-nowrap gap-2 w-full justify-between">
                 <div class="flex flex-col w-full items-start pl-5 ml-5">
-                    <p class="inline-block min-w-max text-sm">{new Date(item.data.startDate).getFullYear()}-{new Date(item.data.endDate).getFullYear()}</p>
-                    <h4><a href={item.data.url} target="_blank">{item.data.company}</a></h4>
+                    <p class="inline-block min-w-max text-sm">{item.date}</p>
+                    <h4><a href={item.url} target="_blank">{item.company}</a></h4>
                 </div>
                 
               </div>
