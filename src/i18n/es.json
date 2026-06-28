@@ -4,35 +4,62 @@
     "nav.education": "Educación",
     "nav.skills": "Skills",
     "nav.certifications": "Certificados",
-    "hero.about": "👋 ¡Hola! Soy Siro y desde siempre <strong>la informática ha sido mi pasión</strong>. Me encanta resolver problemas, aprender constantemente y explorar tecnologías <strong>frontend y backend</strong>. Siempre estoy buscando nuevos retos que me hagan crecer como desarrollador.",
-    "hero.role": "Fullstack Developer & IA",
+    "hero.about": "👋 ¡Hola! Soy Siro, <strong>ingeniero de IA</strong> centrado en diseñar y construir <strong>sistemas inteligentes</strong> que resuelven problemas reales. Trabajo con <strong>soluciones basadas en LLM, flujos con agentes y automatización</strong>, y soy <strong>cofundador de Artekia</strong>, una consultora de IA que ayuda a startups y pymes a adoptar y aplicar la IA con impacto de negocio medible.",
+    "hero.role": "AI Engineer",
     "hero.location": "Madrid, España",
     "projects": [
         {
+            "id": 8,
+            "title": "OpenThinking",
+            "desc": "Framework open source de orquestación de agentes multi-LLM para construir pipelines, orquestadores y flujos de IA colaborativos, con contexto compartido, políticas de acceso y skills reutilizables entre cualquier proveedor.",
+            "url": "https://github.com/sicora-dev/Open-Thinking",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "repo": "https://github.com/sicora-dev/Open-Thinking",
+            "stack": "TypeScript,Agents,LLM"
+        },
+        {
+            "id": 7,
+            "title": "Asistente para Instaladora de Climatización",
+            "desc": "Asistente de IA que convierte los datos de la visita técnica en presupuestos y certificados de instalación listos para firmar. 70% menos tiempo redactando presupuestos y cero errores de transcripción.",
+            "url": "https://www.artekia.com/portfolio/instalaciones-clima",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "repo": "https://www.artekia.com/portfolio/instalaciones-clima",
+            "stack": "Python,Agents,Automation"
+        },
+        {
+            "id": 6,
+            "title": "Automatización para Bufete de Abogados",
+            "desc": "Sistema de automatización de notificaciones judiciales y plazos para un bufete con +200 casos activos: monitoriza LexNET y portales judiciales, clasifica y avisa por WhatsApp/email, y gestiona un calendario con alertas a 7, 3 y 1 día. Cero plazos perdidos y -40% de tiempo administrativo.",
+            "url": "https://www.artekia.com/portfolio/bufete-abogados",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "repo": "https://www.artekia.com/portfolio/bufete-abogados",
+            "stack": "Python,Agents,WhatsApp API"
+        },
+        {
             "id": 5,
-            "title": "AWS Cloud Architecting",
-            "desc": "Plataforma CRM para vendedores de Amazon, con chat en tiempo real y agentes de IA.",
+            "title": "Sellervate",
+            "desc": "Plataforma CRM y editor visual para vendedores de Amazon. Lideré su evolución a la v2.0 e integré IA para generar y mejorar creatividades de forma más rápida y consistente.",
             "url": "https://sellervate.com",
             "icon": "https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/skills/aws.svg",
-            "repo": "https://sellervate.com",
+            "repo": "https://www.artekia.com/portfolio/plataforma-visual-ia",
             "stack": "AWS,Nextjs,Python"
         },
         {
             "id": 4,
             "title": "ChatPol",
-            "desc": "Transformando un chatbot monolítico lento en un sistema RAG multi-agente de alta velocidad para consultas policiales.",
-            "url": "#",
+            "desc": "Rediseño de un chatbot monolítico lento en un sistema RAG multi-agente: cada consulta se dirige al agente especialista (Tráfico, Penal, Extranjería). Tiempo de respuesta de 50s a menos de 10s (-80%).",
+            "url": "https://www.artekia.com/portfolio/asistente-policial-ia",
             "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
-            "repo": "#",
-            "stack": "Python,Postgresql,LangChain"
+            "repo": "https://www.artekia.com/portfolio/asistente-policial-ia",
+            "stack": "Python,RAG,LangChain"
         },
         {
             "id": 3,
             "title": "Pipeline Distribuidora de Disfraces",
-            "desc": "Sistema de IA multi-agente que procesa imágenes de proveedores y genera listados de productos automáticos (color, talla, descripciones y palabras clave optimizadas).",
-            "url": "#",
+            "desc": "Sistema multi-agente que convierte fotos de almacén en fichas de e-commerce listas: agentes de limpieza y normalización de datos más un agente de generación de imágenes (Nano Banana) que crea fotos tipo estudio. 90% menos tiempo.",
+            "url": "https://www.artekia.com/portfolio/distribuidor",
             "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
-            "repo": "#",
+            "repo": "https://www.artekia.com/portfolio/distribuidor",
             "stack": "Python,Agents,Computer Vision"
         },
         {
@@ -59,7 +86,7 @@
             "id": 5,
             "company": "Artekia",
             "title": "Co-Founder",
-            "date": "2025 - Actualidad",
+            "date": "Sep 2025 - Actualidad",
             "url": "https://artekia.com",
             "description": "Estudio boutique de software e IA para startups y pymes, enfocado en crear productos útiles, automatizar procesos y resolver problemas comerciales reales con calidad técnica."
         },
@@ -67,7 +94,7 @@
             "id": 4,
             "company": "Sellervate",
             "title": "Full Stack Frontend Developer",
-            "date": "Feb 2025 - Actualidad",
+            "date": "Feb 2025 - Sep 2025",
             "url": "https://sellervate.com",
             "description": "Desarrollé la aplicación web de Sellervate utilizando Next.js, Python, PostgreSQL y AWS."
         },
@@ -124,6 +151,11 @@
     ],
     "certifications": [
         {
+            "title": "Azure Data Scientist Associate",
+            "description": "Entrenamiento, despliegue y monitorización de modelos de Machine Learning con Azure Machine Learning.",
+            "link": "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-scientist/"
+        },
+        {
             "title": "Azure AI Engineer Associate",
             "description": "Diseño e implementación de soluciones con Azure AI, Search y Open AI.",
             "link": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/"
@@ -137,6 +169,11 @@
             "title": "Azure Database Administrator Associate",
             "description": "Gestión y comprensión de conceptos de datos principales con Azure Data Services.",
             "link": "https://learn.microsoft.com/en-us/credentials/certifications/azure-database-administrator-associate/"
+        },
+        {
+            "title": "Azure Data Fundamentals",
+            "description": "Conceptos fundamentales de datos y servicios de datos en Azure (relacional, no relacional y analítica).",
+            "link": "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/"
         },
         {
             "title": "CCNA R&S",
