@@ -24,6 +24,8 @@ type SkillsType = {
   backend: SkillArea;
   mobile: SkillArea;
   cloud: SkillArea;
+  ai: SkillArea;
+  automation: SkillArea;
 };
 
 const skills: SkillsType = {
@@ -49,6 +51,18 @@ const skills: SkillsType = {
   },
   cloud: {
     AWS: "aws",
+    Azure: "azure",
+    GCP: "gcp",
+  },
+  ai: {
+    OpenAI: "openai",
+    Claude: "anthropic",
+    LangGraph: "langchain",
+  },
+  automation: {
+    Docker: "docker",
+    n8n: "n8n",
+    "GitHub Actions": "githubactions",
   },
 };
 ---

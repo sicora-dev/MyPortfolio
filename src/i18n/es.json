@@ -13,7 +13,7 @@
             "title": "OpenThinking",
             "desc": "Framework open source de orquestación de agentes multi-LLM para construir pipelines, orquestadores y flujos de IA colaborativos, con contexto compartido, políticas de acceso y skills reutilizables entre cualquier proveedor.",
             "url": "https://github.com/sicora-dev/Open-Thinking",
-            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/Open-Thinking/main/logo.png",
             "repo": "https://github.com/sicora-dev/Open-Thinking",
             "stack": "TypeScript,Agents,LLM"
         },
@@ -22,7 +22,7 @@
             "title": "Asistente para Instaladora de Climatización",
             "desc": "Asistente de IA que convierte los datos de la visita técnica en presupuestos y certificados de instalación listos para firmar. 70% menos tiempo redactando presupuestos y cero errores de transcripción.",
             "url": "https://www.artekia.com/portfolio/instalaciones-clima",
-            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "icon": "/skills/python.svg",
             "repo": "https://www.artekia.com/portfolio/instalaciones-clima",
             "stack": "Python,Agents,Automation"
         },
@@ -31,7 +31,7 @@
             "title": "Automatización para Bufete de Abogados",
             "desc": "Sistema de automatización de notificaciones judiciales y plazos para un bufete con +200 casos activos: monitoriza LexNET y portales judiciales, clasifica y avisa por WhatsApp/email, y gestiona un calendario con alertas a 7, 3 y 1 día. Cero plazos perdidos y -40% de tiempo administrativo.",
             "url": "https://www.artekia.com/portfolio/bufete-abogados",
-            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "icon": "/skills/openai.svg",
             "repo": "https://www.artekia.com/portfolio/bufete-abogados",
             "stack": "Python,Agents,WhatsApp API"
         },
@@ -40,7 +40,7 @@
             "title": "Sellervate",
             "desc": "Plataforma CRM y editor visual para vendedores de Amazon. Lideré su evolución a la v2.0 e integré IA para generar y mejorar creatividades de forma más rápida y consistente.",
             "url": "https://sellervate.com",
-            "icon": "https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/skills/aws.svg",
+            "icon": "/skills/nextjs.svg",
             "repo": "https://www.artekia.com/portfolio/plataforma-visual-ia",
             "stack": "AWS,Nextjs,Python"
         },
@@ -49,7 +49,7 @@
             "title": "ChatPol",
             "desc": "Rediseño de un chatbot monolítico lento en un sistema RAG multi-agente: cada consulta se dirige al agente especialista (Tráfico, Penal, Extranjería). Tiempo de respuesta de 50s a menos de 10s (-80%).",
             "url": "https://www.artekia.com/portfolio/asistente-policial-ia",
-            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "icon": "/skills/langchain.svg",
             "repo": "https://www.artekia.com/portfolio/asistente-policial-ia",
             "stack": "Python,RAG,LangChain"
         },
@@ -58,7 +58,7 @@
             "title": "Pipeline Distribuidora de Disfraces",
             "desc": "Sistema multi-agente que convierte fotos de almacén en fichas de e-commerce listas: agentes de limpieza y normalización de datos más un agente de generación de imágenes (Nano Banana) que crea fotos tipo estudio. 90% menos tiempo.",
             "url": "https://www.artekia.com/portfolio/distribuidor",
-            "icon": "https://raw.githubusercontent.com/sicora-dev/DevPath/refs/heads/main/public/stars.svg",
+            "icon": "/skills/docker.svg",
             "repo": "https://www.artekia.com/portfolio/distribuidor",
             "stack": "Python,Agents,Computer Vision"
         },
@@ -76,7 +76,7 @@
             "title": "Portfolio",
             "desc": "Mi propio portfolio personal, construido con Astro, con un diseño moderno y minimalista.",
             "url": "https://portfolio.sicoradev.com",
-            "icon": "https://raw.githubusercontent.com/sicora-dev/MyPortfolio/refs/heads/main/public/skills/astro.svg",
+            "icon": "/skills/astro.svg",
             "repo": "https://github.com/sicora-dev/MyPortfolio",
             "stack": "Astro,Css"
         }
