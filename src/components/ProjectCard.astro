@@ -1,6 +1,6 @@
 ---
 import TechCard from "./TechCard.astro";
-const { title, desc, link, url, icon, repo, stack } = Astro.props;
+const { title, desc, link, url, icon, iconDark, repo, stack } = Astro.props;
 const techs = stack.split(',')
 
 ---
@@ -38,7 +38,14 @@ const techs = stack.split(',')
     <h3
       class="font-bold flex items-center gap-1 cursor-pointer hover:underline underline underline-offset-4 sm:no-underline group"
     >
-      <img class="w-4 h-4 text-[#72B01D]" src={icon} />
+      {iconDark ? (
+        <>
+          <img class="w-4 h-4 text-[#72B01D] dark:hidden block" src={icon} />
+          <img class="w-4 h-4 text-[#72B01D] hidden dark:block" src={iconDark} />
+        </>
+      ) : (
+        <img class="w-4 h-4 text-[#72B01D]" src={icon} />
+      )}
       <a class="project" data-url={url} data-repo={repo} href=`${url}` target="_blank">{title}</a>
 
       <svg

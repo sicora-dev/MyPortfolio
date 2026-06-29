@@ -13,7 +13,8 @@
             "title": "OpenThinking",
             "desc": "Open-source multi-LLM agent orchestration framework for building pipelines, orchestrators, and collaborative AI workflows, with shared context, access policies, and reusable skills across any provider.",
             "url": "https://github.com/sicora-dev/Open-Thinking",
-            "icon": "https://raw.githubusercontent.com/sicora-dev/Open-Thinking/main/logo.png",
+            "icon": "https://raw.githubusercontent.com/sicora-dev/Open-Thinking/main/logo_dark.png",
+            "iconDark": "https://raw.githubusercontent.com/sicora-dev/Open-Thinking/main/logo.png",
             "repo": "https://github.com/sicora-dev/Open-Thinking",
             "stack": "TypeScript,Agents,LLM"
         },
